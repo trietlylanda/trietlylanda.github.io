@@ -1,8 +1,21 @@
 <header>
-	<nav>
-		{% include primary-nav-items.html %}
-	</nav>
-	<div>
-		{% include search/input.html %}
-	</div>
+	<section class="top-1">
+		<div class="grid">
+			<div class="unit w-1-1" id="hdCt">
+				<div class="logo">
+					<a href="/">
+						<img src="/img/logo.png" width="588.3" height="94.5" alt="Skinlosophy">
+					</a>
+				</div>
+				<div class="search hide-on-mobiles">
+					{% include search/input.html %}
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="top-2">
+		<nav class="main-nav hide-on-mobiles">
+			{% include primary-nav-items.html %}
+		</nav>
+	</section>
 </header>

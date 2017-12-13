@@ -1,0 +1,65 @@
+/*	Base */
+
+html{
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after{
+	box-sizing: inherit;
+}
+
+body{
+	// font:
+	// color:
+	// background-color: 
+	margin: 0;
+}
+
+.clear {
+	display: block;
+}
+
+.clear:after{
+	content: " ";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+/* Section */
+
+header,
+section,
+footer{
+	float: left;
+	width: 100%;
+	clear: both;
+}
+
+/* Header */
+
+header{
+	.main-nav{
+		
+	}
+	#hdCt {
+	    position: relative;
+	    text-align: center;
+	}
+	.logo{
+		display: inline-block;
+		position: relative;
+		margin: auto;
+		overflow: hidden;
+	}
+	.search{
+		width: 200px;
+		position: absolute;
+		top: 15px;
+		right: 0;
+	}
+}
+
