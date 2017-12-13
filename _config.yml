@@ -1,0 +1,48 @@
+sass:
+  style: compressed
+
+#gauges_id:
+#google_analytics_id:
+#google_site_verification:
+
+#repository: 
+
+timezone: Asia/Ho_Chi_Minh
+
+defaults:
+  -
+    scope:
+      path: "_products"
+      type: "products"
+    values:
+      layout: "products"
+  -
+    scope:
+      path: "_posts"
+      type: "posts"
+    values: 
+      layout: "news_item"
+      #image:
+
+collections:
+  products:
+    permalink: /:collection/:path/
+    output: true
+  posts:
+    permalink: /news/:year/:month/:day/:title/
+    output: true
+  tutorials:
+    output: true
+
+name: Triet ly lan da • Skinlosophy
+description: Triet ly lan da
+url: https://trietlylanda.github.io
+
+#logo: img/logo-2x.png
+
+#plugins:
+
+exclude:
+  - .gitingore
+  - CNAME
+  - readme.md
