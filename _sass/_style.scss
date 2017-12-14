@@ -42,24 +42,17 @@ footer{
 /* Header */
 
 header{
-	.main-nav{
-		
-	}
-	#hdCt {
-	    position: relative;
-	    text-align: center;
-	}
-	.logo{
+	nav {
 		display: inline-block;
-		position: relative;
-		margin: auto;
-		overflow: hidden;
-	}
-	.search{
-		width: 200px;
-		position: absolute;
-		top: 15px;
-		right: 0;
+		ul{
+			padding: 0;
+			margin: 0;
+			white-space: nowrap;
+			display: inline-block;
+		}
+		li{
+			display: inline-block;
+		}
 	}
 }
 
