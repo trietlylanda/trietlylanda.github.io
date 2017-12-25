@@ -1,0 +1,61 @@
+- parents: Cham soc da
+  child:
+    - title: Chong lao hoa-duong am sau
+      product: 
+        - item: glow_again
+        - item: mat_na_hong_sam
+        - item: fantasy_blue
+        - item: sua_gao
+    - title: Tai tao da
+      product: 
+        - item: renewal
+        - item: my_own_sceret
+        - item: multi_repair
+        - item: youth
+        - item: sen_to_tam
+    - title: Tri mun
+      product: 
+        - item: tieu_viem
+        - item: oil control
+        - item: de_tox
+        - item: hope
+        - item: the_first_time
+    - title: Lam sach
+      product: 
+        - item: squalane
+        - item: micellar
+        - item: floral
+        - item: greentea
+        - item: the neutral
+- parents: Trang diem
+  child:
+    - title: Son Pha Le "Crystal"
+      product:
+        - item: hot_red
+        - item: true_love
+        - item: first_love
+        - item: crush
+        - item: valentine
+        - item: feline
+    - title: Son Kem Li - LOVE
+      product:
+        - item: agape
+        - item: ludus
+        - item: storge
+        - item: eros
+        - item: mania
+        - item: pragma
+- parents: Cham soc co the va toc
+  child:
+    - title: Cham soc co the
+      product:
+        - item: baby_skin
+        - item: soap_hoa_cuc
+        - item: soap_oai_huong
+        - item: soap_huong_thao
+        - item: soap_hoa_nhai
+        - item: body_lotion
+        - item: satin_oil
+    - title: Cham soc toc
+      product:
+        - item: hair_10

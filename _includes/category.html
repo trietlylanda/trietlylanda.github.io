@@ -1,0 +1,8 @@
+<div class="unit w-1-5">
+	<aside>
+		{% for section in site.data.category %}
+		<h4>{{ section.parents }}</h4>
+		{% include category_ul.html items=section.child %}
+		{% endfor %}
+	</aside>
+</div>

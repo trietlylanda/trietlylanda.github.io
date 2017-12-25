@@ -12,26 +12,32 @@ timezone: Asia/Ho_Chi_Minh
 defaults:
   -
     scope:
-      path: "_products"
-      type: "products"
+      path: "_product"
+      type: "product"
     values:
-      layout: "products"
+      layout: "product"
   -
     scope:
       path: "_posts"
       type: "posts"
     values: 
       layout: "news_item"
-      #image:
+  -
+    scope:
+      path: "_show"
+      type: "show"
+    values:
+      layout: "show"
 
 collections:
-  products:
+  product:
     permalink: /:collection/:path/
     output: true
   posts:
     permalink: /news/:year/:month/:day/:title/
     output: true
-  tutorials:
+  show:
+    permalink: /:collections/:path/
     output: true
 
 name: Triet ly lan da • Skinlosophy

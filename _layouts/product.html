@@ -1,0 +1,23 @@
+---
+layout: default
+---
+
+<section class="product">
+	<div class="grid">
+		<div class="unit w-4-5">
+			<img src="../../img/product/{{ page.source }}">
+			<p>{{ page.name }}</p>
+			<p> {{ page.price }} </p>
+			<p>{{ page.size }} </p>
+			<p> {{ page.introduction }} </p>
+			<p> {{ page.use }}</p>
+			<ul>
+				{% for item in page.ingredient %}
+				<li>{{item.item}} : {{item.action}}</li>
+				{% endfor %}
+			</ul>
+		</div>
+		{% include category.html %}
+		<div class="clear"></div>
+	</div>
+</section>
