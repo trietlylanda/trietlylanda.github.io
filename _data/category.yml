@@ -1,35 +1,43 @@
-- parents: Cham soc da
+- name: Cham soc da
+  path: cham_soc_da
   child:
-    - title: Chong lao hoa-duong am sau
-      product: 
-        - item: glow_again
+    - name: Chong lao hoa-duong am sau
+      path: chong_lao_hoa-duong_am_sau
+      product:
+        - item: glow_again_serum
+        - item: glow_again_cream
         - item: mat_na_hong_sam
         - item: fantasy_blue
         - item: sua_gao
-    - title: Tai tao da
+    - name: Tai tao da
+      path: tai_tao_da
       product: 
         - item: renewal
         - item: my_own_sceret
         - item: multi_repair
         - item: youth
         - item: sen_to_tam
-    - title: Tri mun
+    - name: Tri mun
+      path: tri_mun
       product: 
         - item: tieu_viem
-        - item: oil control
+        - item: oil_control
         - item: de_tox
         - item: hope
         - item: the_first_time
-    - title: Lam sach
+    - name: Lam sach
+      path: lam_sach
       product: 
         - item: squalane
         - item: micellar
         - item: floral
         - item: greentea
-        - item: the neutral
-- parents: Trang diem
+        - item: the_neutral
+- name: Trang diem
+  path: trang_diem
   child:
-    - title: Son Pha Le "Crystal"
+    - name: Son Pha Le "Crystal"
+      path: crystal
       product:
         - item: hot_red
         - item: true_love
@@ -37,7 +45,8 @@
         - item: crush
         - item: valentine
         - item: feline
-    - title: Son Kem Li - LOVE
+    - name: Son Kem Li - LOVE
+      path: love
       product:
         - item: agape
         - item: ludus
@@ -45,9 +54,11 @@
         - item: eros
         - item: mania
         - item: pragma
-- parents: Cham soc co the va toc
+- name: Cham soc co the va toc
+  path: cham_soc_co_the_va_toc
   child:
-    - title: Cham soc co the
+    - name: Cham soc co the
+      path: cham_soc_co_the
       product:
         - item: baby_skin
         - item: soap_hoa_cuc
@@ -56,6 +67,8 @@
         - item: soap_hoa_nhai
         - item: body_lotion
         - item: satin_oil
-    - title: Cham soc toc
+    - name: Cham soc toc
+      path: cham_soc_toc
       product:
-        - item: hair_10
+        - item: hair_10_100
+        - item: hair_10_220

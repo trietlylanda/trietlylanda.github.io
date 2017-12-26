@@ -14,7 +14,7 @@ overview: true
 	<div class="slider">
 		{% for section in site.data.slider %}
 		<div class="img_container">
-			<img src="../img/album/{{ section.source }}">
+			<img src="img/album/{{ section.source }}">
 			<div class="overlay"></div>
 			<div class="description hide-on-mobiles">
 				<p>
@@ -32,6 +32,15 @@ overview: true
 		</div>
 	</div>
 	<div class="grid">
-		
+		{% for item in site.data.main_product %}
+			{% for file in site.product %}
+				{% if file.path contains item.path %}
+					<div class="unit w-1-3">
+						<img src="img/product/{{file.source}}">
+						<a href="{{ file.url }}">{{file.name}}</a>
+					</div>
+				{% endif %}
+			{% endfor %}
+		{% endfor %}	
 	</div>
 </section>

@@ -5,7 +5,7 @@ sass:
 #google_analytics_id:
 #google_site_verification:
 
-#repository: 
+#repository:
 
 timezone: Asia/Ho_Chi_Minh
 
@@ -31,7 +31,6 @@ defaults:
 
 collections:
   product:
-    permalink: /:collection/:path/
     output: true
   posts:
     permalink: /news/:year/:month/:day/:title/
