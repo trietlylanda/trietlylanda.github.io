@@ -4,71 +4,71 @@
     - name: Chong lao hoa-duong am sau
       path: chong_lao_hoa-duong_am_sau
       product:
-        - item: glow_again_serum
-        - item: glow_again_cream
-        - item: mat_na_hong_sam
-        - item: fantasy_blue
-        - item: sua_gao
+        - glow_again_serum
+        - glow_again_cream
+        - mat_na_hong_sam
+        - fantasy_blue
+        - sua_gao
     - name: Tai tao da
       path: tai_tao_da
       product: 
-        - item: renewal
-        - item: my_own_sceret
-        - item: multi_repair
-        - item: youth
-        - item: sen_to_tam
+        - renewal
+        - my_own_sceret
+        - multi_repair
+        - youth
+        - sen_to_tam
     - name: Tri mun
       path: tri_mun
       product: 
-        - item: tieu_viem
-        - item: oil_control
-        - item: de_tox
-        - item: hope
-        - item: the_first_time
+        - tieu_viem
+        - oil_control
+        - de_tox
+        - hope
+        - the_first_time
     - name: Lam sach
       path: lam_sach
       product: 
-        - item: squalane
-        - item: micellar
-        - item: floral
-        - item: greentea
-        - item: the_neutral
+        - squalane
+        - micellar
+        - floral
+        - greentea
+        - the_neutral
 - name: Trang diem
   path: trang_diem
   child:
     - name: Son Pha Le "Crystal"
       path: crystal
       product:
-        - item: hot_red
-        - item: true_love
-        - item: first_love
-        - item: crush
-        - item: valentine
-        - item: feline
+        - hot_red
+        - true_love
+        - first_love
+        - crush
+        - valentine
+        - feline
     - name: Son Kem Li - LOVE
       path: love
       product:
-        - item: agape
-        - item: ludus
-        - item: storge
-        - item: eros
-        - item: mania
-        - item: pragma
+        - agape
+        - ludus
+        - storge
+        - eros
+        - mania
+        - pragma
 - name: Cham soc co the va toc
   path: cham_soc_co_the_va_toc
   child:
     - name: Cham soc co the
       path: cham_soc_co_the
       product:
-        - item: baby_skin
-        - item: soap_hoa_cuc
-        - item: soap_oai_huong
-        - item: soap_huong_thao
-        - item: soap_hoa_nhai
-        - item: body_lotion
-        - item: satin_oil
+        - baby_skin
+        - soap_hoa_cuc
+        - soap_oai_huong
+        - soap_huong_thao
+        - soap_hoa_nhai
+        - body_lotion
+        - satin_oil
     - name: Cham soc toc
       path: cham_soc_toc
       product:
-        - item: hair_10_100
-        - item: hair_10_220
+        - hair_10_100
+        - hair_10_220

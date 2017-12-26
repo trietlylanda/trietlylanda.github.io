@@ -12,11 +12,11 @@ layout: default
 			<p> {{ page.introduction }} </p>
 			<p> {{ page.use }}</p>
 			<ul>
-				{% for item in page.ingredient %}
-					{% if item.size > 1 %}
-					<li>{{item.item}} {% if item.action.size > 0 %}: {{item.action}}{% endif %} </li>
-					{% endif %}
-				{% endfor %}
+				{% if page.ingredient.size > 0 %}
+					{% for item in page.ingredient %}
+						<li>{{item.item}}{% if item.action.size > 0 %}: {{item.action}}{% endif %} </li>
+					{% endfor %}
+				{% endif %}
 			</ul>
 		</div>
 		{% include category.html %}

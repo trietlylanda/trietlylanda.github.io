@@ -31,16 +31,6 @@ overview: true
 			<h2>SAN PHAM NOI BAT</h2>
 		</div>
 	</div>
-	<div class="grid">
-		{% for item in site.data.main_product %}
-			{% for file in site.product %}
-				{% if file.path contains item.path %}
-					<div class="unit w-1-3">
-						<img src="img/product/{{file.source}}">
-						<a href="{{ file.url }}">{{file.name}}</a>
-					</div>
-				{% endif %}
-			{% endfor %}
-		{% endfor %}	
-	</div>
+	{% assign items = site.data.main_product %}
+	{% include show.html %}
 </section>
