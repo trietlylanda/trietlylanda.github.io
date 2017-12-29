@@ -1,7 +1,10 @@
 <div class="unit w-1-5">
 	<aside>
 		{% for section in site.data.category %}
-			<h4>{{ section.name }}</h4>
+			{% assign str = section.path | prepend: "/product/" | append: "/" %}
+			<a href="{{str}}">
+				<h4>{{ section.name }}</h4>
+			</a>
 			{% include category_ul.html items=section.child %}
 		{% endfor %}
 	</aside>

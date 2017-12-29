@@ -70,5 +70,5 @@
     - name: Cham soc toc
       path: cham_soc_toc
       product:
-        - hair_10_100
-        - hair_10_220
+        - hair10_100
+        - hair10_220

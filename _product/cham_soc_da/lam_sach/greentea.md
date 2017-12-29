@@ -7,7 +7,7 @@ use:
 Bước 1: Thấm nước tẩy trang ra bông
 Bước 2: Lau đều lên mặt
 Bước 3: Lặp lại nếu cần thiết, không bắt buộc rửa lại với nước.
-source: GREENTEA.jpg
+source: greentea.jpg
 ingredient:
 - item: Distilled water
   action: 

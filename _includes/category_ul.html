@@ -1,5 +1,8 @@
 <ul>
 	{% for item in include.items %}
-		<li>{{item.name}}</li>
+		{% assign tmp = str | append: {{item.path}} %}
+		<a href="{{tmp}}">
+			<li>{{item.name}}</li>
+		</a>
 	{% endfor %}
 </ul>
