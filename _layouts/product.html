@@ -4,6 +4,7 @@ layout: default
 
 <section class="product">
 	<div class="grid">
+		{% include category.html %}
 		<div class="unit w-4-5">
 			<img src="../../../img/product/{{ page.source }}">
 			<p>{{ page.name }}</p>
@@ -19,7 +20,6 @@ layout: default
 				{% endif %}
 			</ul>
 		</div>
-		{% include category.html %}
 		<div class="clear"></div>
 	</div>
 </section>
