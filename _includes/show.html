@@ -6,10 +6,13 @@
 			{% if item ==  str %}
 				{% assign link = post.path | replace: ".md", ".html"%}
 				{% assign link = link | replace: "_product", "product" %}
-				<div class="unit w-1-2">
+				<div class="unit w-1-2 gallery">
 					<a href="{{site.url}}/{{ link }}">
 						<img src="/img/product/{{post.source}}">
-						<p>{{ post.name }}</p>
+						<div class="desc">
+							<div class="name">{{ post.name }}</div>
+							<div class="price">{{ post.price }}</div>
+						</div>
 					</a>
 				</div>
 			{% endif %}

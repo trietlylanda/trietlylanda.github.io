@@ -25,14 +25,14 @@
 }
 
   /* This ensures the outer gutters are equal to the (doubled) inner gutters. */
-.grid .unit:first-child { padding-left: 0px; }
-.grid .unit:last-child { padding-right: 0px; }
+// .grid .unit:first-child { padding-left: 0px; }
+// .grid .unit:last-child { padding-right: 0px; }
 
 /* Nested grids already have padding though, so let's nuke it */
-.unit .unit:first-child { padding-left: 0; }
-.unit .unit:last-child { padding-right: 0; }
-.unit .grid:first-child > .unit { padding-top: 0; }
-.unit .grid:last-child > .unit { padding-bottom: 0; }
+// .unit .unit:first-child { padding-left: 0; }
+// .unit .unit:last-child { padding-right: 0; }
+// .unit .grid:first-child > .unit { padding-top: 0; }
+// .unit .grid:last-child > .unit { padding-bottom: 0; }
 
 /* Let people nuke the gutters/padding completely in a couple of ways */
 .no-gutters .unit,

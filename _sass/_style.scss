@@ -85,7 +85,7 @@ header{
 				float: left;
 				.dropbtn{
 					display: inline-block;
-					color: #333;
+					color: #555;
 					font-weight: 400;
 					font-size: 18px;
 					text-transform: uppercase;
@@ -106,7 +106,7 @@ header{
 					z-index: 1;
 					text-align: left;
 					a{
-						color: black;
+						color: #555;
 						padding: 12px 16px;
 						text-decoration: none;
 						display: block;
@@ -254,13 +254,35 @@ header{
 
 /* Footer */
 footer{
-	margin-top: 10px;
-	h3{
-		font-size: 20px;
-		font-weight: 700;
+	margin-top: 50px;
+	padding: 30px 0px;
+	background-color: #3A3A3A;
+	color: #bbb;
+	font-size: 20px;
+	font-weight: 300;
+	.unit{
+		padding: 20px!important;
 	}
-	.grid{
-		border-top: 1px #000 solid;
+	.title{
+		text-transform: uppercase;
+		border-bottom: 1px solid #bbb;
+		padding: 5px 0px;
+	}
+	.items{
+		font-size: 18px;
+		margin-left: -1em;
+		line-height: 1.5em;
+		.about{
+			padding: 1em;
+		}
+		ul{
+			li{
+				a{
+					text-decoration: none;
+					color: #bbb;
+				}
+			}
+		}
 	}
 }
 /* End Header */
@@ -275,13 +297,18 @@ footer{
 	    border-bottom: 1px solid #EEE;
 	    border-top: none;
 	    position: relative;
+	    a{
+	    	color: #555;
+	    	font-size: 18px;
+	    	text-decoration: none;
+	    	font-weight: 400;
+	    }
+	    a:hover{
+	    	color: #506c37;
+	    }
 	    .father{
-    	    color: #555;
 		    display: block;
 		    padding: 30px 0px 10px 20px;
-		    font-weight: 400;
-		    font-size: 18px;
-		    text-decoration: none;
 		    text-transform: uppercase;
 		    background: #F7F7F7;
 	    }
@@ -290,18 +317,28 @@ footer{
 	    		margin: 0;
 	    		padding: 0;
 	    		list-style-type: none;
-	    		a{
-	    			color: #555;
-	    			text-decoration: none;
-			    	li{
-		    		    border-top: 1px solid #EEE;
-		    		    padding: 20px;
-					    border-bottom: none;
-			    	}
-
-	    		}
+		    	li{
+	    		    border-top: 1px solid #EEE;
+	    		    padding: 20px;
+				    border-bottom: none;
+		    	}
 	    	}
 	    }
     }
 }
 /* End Category */
+
+/* Show */
+.show{
+	.gallery{
+		padding: 0px 50px;
+		.desc{
+			display: block;
+			height: 70px;
+			.name{
+				overflow: hidden;
+			}
+		}
+	}
+}
+/* End Show */
