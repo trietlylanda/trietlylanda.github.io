@@ -337,21 +337,50 @@ footer{
 		font-size: 18px;
 	}
 	.gallery{
-		padding: 0px 50px 20px 50px;
-		.desc{
-			line-height: 1.2em;
-			.name{
-				height: 22px;
-				color: #333;
+		margin: 0px;
+		padding: 0px 30px 30px 30px;
+		a{
+			.contentP{
+				position: relative;
 				overflow: hidden;
-				text-transform: uppercase;
-				margin: 10px 0px 5px 0px;
-				font-weight: 300; 
+				.detail{
+					width: 100%;
+					padding-top: 0px;
+					padding-bottom: 20px;
+					text-align: center;
+					text-transform: uppercase;
+					font-size: 18px;
+					font-weight: 700;
+					color: #fff;
+					background-color: #414a39;
+					position: absolute;
+					bottom: -100px;
+				    -webkit-transition: all 0.5s ease;
+				    -moz-transition: all 0.5s ease;
+				    -o-transition: all 0.5s ease;
+				    transition: all 0.5s ease;
+				}
 			}
-			.price{
-				color: #DC3912;
-				font-weight: 700;
-				text-transform: uppercase;
+			.contentP:hover{
+				.detail{
+					bottom: 0px;
+				}
+			}
+			.desc{
+				line-height: 1.2em;
+				.name{
+					height: 2.4em;
+					color: #333;
+					overflow: hidden;
+					text-transform: uppercase;
+					margin: 10px 0px 5px 0px;
+					font-weight: 300; 
+				}
+				.price{
+					color: #DC3912;
+					font-weight: 700;
+					text-transform: uppercase;
+				}
 			}
 		}
 	}
