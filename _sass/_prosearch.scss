@@ -1,0 +1,49 @@
+form{
+	position: relative;
+  display: block;
+  margin: 0px;
+  width: 40%;
+  border-bottom: 1px solid #fff;
+
+	#prosearch-input{
+		background-color: transparent;
+	  border: none;
+	  height: 30px;
+	  font-size: 18px;
+	  font-weight: 100;
+	  color: #fff;
+	}
+
+	::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+	  color: #fff;
+	}
+	::-moz-placeholder { /* Firefox 19+ */
+	  color: #fff;
+	}
+	:-ms-input-placeholder { /* IE 10+ */
+	  color: #fff;
+	}
+	:-moz-placeholder { /* Firefox 18- */
+	  color: #fff;
+	}
+
+	#prosearch-input:focus{
+	  outline: none
+	}
+
+	button{
+		position: absolute;
+		right: 0px;
+		top: 1px;
+		border: none;
+		background: transparent;
+		float: right;
+		height: 94%;
+		cursor: pointer;
+		color: #fff;
+	}
+	.fa-search:before {
+    content: "\f002";
+	}
+}
+

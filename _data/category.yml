@@ -1,7 +1,7 @@
-- name: Cham soc da
+- name: Chăm sóc da
   path: cham_soc_da
   child:
-    - name: Chong lao hoa-duong am sau
+    - name: Chống lão hóa dưỡng ẩm sâu
       path: chong_lao_hoa-duong_am_sau
       product:
         - glow_again_serum
@@ -9,7 +9,7 @@
         - mat_na_hong_sam
         - fantasy_blue
         - sua_gao
-    - name: Tai tao da
+    - name: Tái tạo da
       path: tai_tao_da
       product: 
         - renewal
@@ -17,7 +17,7 @@
         - multi_repair
         - youth
         - sen_to_tam
-    - name: Tri mun
+    - name: Trị mụn
       path: tri_mun
       product: 
         - tieu_viem
@@ -25,7 +25,7 @@
         - de_tox
         - hope
         - the_first_time
-    - name: Lam sach
+    - name: Làm sạch
       path: lam_sach
       product: 
         - squalane
@@ -33,10 +33,10 @@
         - floral
         - greentea
         - the_neutral
-- name: Trang diem
+- name: Trang điểm
   path: trang_diem
   child:
-    - name: Son Pha Le "Crystal"
+    - name: Son Pha Lê "Crystal"
       path: crystal
       product:
         - hot_red
@@ -54,10 +54,10 @@
         - eros
         - mania
         - pragma
-- name: Cham soc co the va toc
+- name: Chăm sóc cơ thể và tóc
   path: cham_soc_co_the_va_toc
   child:
-    - name: Cham soc co the
+    - name: Chăm sóc cơ thể
       path: cham_soc_co_the
       product:
         - baby_skin
@@ -67,7 +67,7 @@
         - soap_hoa_nhai
         - body_lotion
         - satin_oil
-    - name: Cham soc toc
+    - name: Chăm sóc tóc
       path: cham_soc_toc
       product:
         - hair10_100

@@ -1,11 +1,11 @@
-<ul>
-	<li>
-		<a href="/product/cham_soc_da">Cham soc da</a>
-	</li>
-	<li>
-		<a href="/product/trang_diem">Trang diem</a>
-	</li>
-	<li>
-		<a href="/product/cham_soc_co_the_va_toc">Cham soc co the va toc</a>
-	</li>
+<ul class="menu">
+{% for section in site.data.category %}
+	{% assign str = section.path | prepend: "/product/" | append: "/" %}
+	<li class="dropdown">
+		<a href="{{str}}" class="dropbtn">{{ section.name }}</a>
+		<div class="dropdown-content">
+			{% include category_ul.html items=section.child %}
+		</div>
+	</li>	
+{% endfor %}
 </ul>
