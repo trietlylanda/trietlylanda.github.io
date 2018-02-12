@@ -7,22 +7,57 @@ layout: default
 		{% include category.html %}
 		<div class="unit w-4-5">
 			<div class="grid">
-				<div class="unit w-g-s">
-					<img src="../../../img/product/{{ page.source }}">	
-				</div>
 				<div class="unit w-g-l">
-					<div class="name">{{ page.name }}</div>
-					<div class="price">{{ page.price }}</div>
-					<div class="size">{{ page.size }}</div>
-					<div class="ingredient">
-						{% if page.ingredient.size > 0 %}
-							{% for item in page.ingredient %}
-								{{ item.item }}
-							{% endfor %}
-						{% endif %}
+					<div class="image">
+						<img src="../../../img/product/{{ page.source }}">	
 					</div>
-					<div class="introduction">{{ page.introduction }}</div>
-					<div class="use">{{ page.use }}</div>
+					
+				</div>
+				<div class="unit w-g-s">
+					<div class="name">{{ page.name }}</div>
+					<div class="size">
+						<span style="margin-right: 10px; color: #333;">Size:</span>
+						<span>{{ page.size }}</span>
+					</div>
+					<div class="price">{{ page.price }}</div>
+					<div class="quantityAddcart">
+						<span class="quantity">
+							<span>Số lượng</span>
+						</span>
+						<button id="addToCart">
+							MUA NGAY
+						</button>
+					</div>
+					<div class="detail">
+						<div class="title">
+							<label>
+								<i class="fa fa-caret-down"></i>   Chi tiết sản phẩm
+							</label>
+						</div>
+						<div class="content">
+							{{ page.content }}
+						</div>
+					</div>
+					<div class="use">
+						<div class="title">
+							<label>
+								<i class="fa fa-caret-down"></i>   Hướng dẫn sử dụng
+							</label>
+						</div>
+						<div class="content">
+							{{ page.use }}
+						</div>
+					</div>
+					<div class="ingredient">
+						<div class="title">
+							<label>
+								<i class="fa fa-caret-down"></i>   Thành phần
+							</label>
+						</div>
+						<div class="content">
+							{{ page.ingredient }}
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>

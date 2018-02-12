@@ -392,3 +392,60 @@ footer{
 	}
 }
 /* End Show */
+
+/* Product */
+.product{
+	color: #777;
+	line-height: 1.3em;
+	font-size: 17px;
+	font-weight: 400;
+	.image{
+		padding: 0px 10px 10px 10px;
+	}
+	.name{
+		color: #333;
+		line-height: 1.5em;
+		text-transform: uppercase;
+		font-size: 24px;
+		font-weight: 300;
+		padding-bottom: 5px;
+		border-bottom: 1px solid #999;
+	}
+	.size{
+		margin: 10px 0px;
+	}
+	.price{
+		text-transform: uppercase;
+		color: #DC3912;
+		font-size: 25px;
+		font-weight: 300;
+	    padding: 10px 0px;
+	}
+	.quantityAddcart{
+		margin: 10px 0px;
+		padding: 10px;
+		background-color: #e6e6e6;
+		color: #111;
+		button{
+		    background-color: #DC3912;
+		    border: none;
+		    color: white;
+		    padding: 15px 32px;
+		    text-align: center;
+		    text-decoration: none;
+		    display: inline-block;
+		    font-size: 16px;
+		    margin: 4px 2px;
+		    cursor: pointer;
+		}
+	}
+	.title{
+		color: #333;
+		font-weight: 400;
+		border-top: 1px solid #999;
+	}
+	.content{
+		padding: 7px 0px 20px 15px;
+	}
+}
+/* End Product */
