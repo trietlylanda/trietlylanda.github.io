@@ -2,9 +2,9 @@
 layout: default
 ---
 
-<div class="grid resposive">
+<div class="grid">
 	{% include category.html %}
-	<div class="unit w-4-5 on">
+	<div class="unit w-4-5">
 		{% assign items = NULL %}
 		{% assign url = page.path  | split: "/" %}
 		{% for section in site.data.category %}
