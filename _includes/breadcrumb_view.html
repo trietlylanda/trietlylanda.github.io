@@ -1,0 +1,19 @@
+<div class="grid">
+	<div class="unit w-1-1">
+		<ul class="breadcrumb_view">
+			<li><a href="/">Trang chủ</a></li>
+			{% for section in site.data.category %}
+				{% assign str1 = section.path | prepend: "/product/" | append: "/" %}
+				{% if page.url contains {{str1}} %}  
+					<li><a href="{{str1}}"> {{section.name}} </a></li>
+				{% endif %}
+				{% for child in section.child %}
+					{% assign str2 = child.path | prepend: {{str1}} | append: "/" %}
+					{% if page.url contains {{str2}} %}
+						<li><a href="{{str2}}"> {{child.name}} </a></li>
+					{% endif %}
+				{% endfor %}
+			{% endfor%}			
+		</ul>
+	</div>
+</div>

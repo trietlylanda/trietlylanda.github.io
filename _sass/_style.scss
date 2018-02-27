@@ -96,6 +96,9 @@ header{
 				.dropbtn:hover{
 					color: #E15452;
 				}
+				.current{
+					color: #E15452;
+				}
 				.dropdown-content{
 					opacity: 0;
 				    visibility: hidden;
@@ -449,3 +452,33 @@ footer{
 	}
 }
 /* End Product */
+
+/* Bread Crumb View */
+.breadcrumb_view{
+    padding: 12px;
+    border-bottom: 1px solid #e6e6e6;
+	li {
+	    list-style: none;
+	    margin: 0px;
+	    display: inline-block;
+	    padding: 0 10px 0 0;
+	    a {
+		    font-size: 18px;
+		    color: #333;
+		    font-weight: 300;
+		    text-decoration: none;
+		}
+		a:after{
+			font-family: FontAwesome;
+		    content: "\f101";
+		    padding-left: 10px;
+		}
+	}
+	li:last-child{
+		background: none;
+		a:after{
+			display: none;
+		}
+	}
+}
+/* End Bread Crumb View */
