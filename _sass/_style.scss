@@ -4,7 +4,7 @@ $noti-red: #ED1A36;
 
 html{
 	box-sizing: border-box;
-	font-size: 14px;
+	font-size: 15px;
 
 	@media screen and (min-width: 900px){
 		font-size: 16px;
@@ -68,19 +68,22 @@ header{
 	.top-1{
 		background-color: #414a39;
 		padding: 2px;
+		font-size: 1rem;
 		.grid{
 			height: 50px;
 		}
 		.grid nav{
 			margin-top: 5px;
 		}
+		li:nth-child(1), :nth-child(2){
+			padding-right: 1rem;
+		}
 		a{
 			text-decoration: none;
-			font-size: 15px;
+			font-size: 0.9rem;
 			font-weight: 400;
 			text-transform: uppercase;
 			color: #fff;
-			margin: 0px 0px 0px 20px;
 		}
 	}
 	.top-2{
@@ -101,7 +104,9 @@ header{
 					display: inline-block;
 					color: #555;
 					font-weight: 400;
-					font-size: 1rem;
+					font-size: 1.1rem;
+					line-height: 1.3rem;
+					padding: 10px 0px;
 					text-transform: uppercase;
 					text-align: center;
 					text-decoration: none;
