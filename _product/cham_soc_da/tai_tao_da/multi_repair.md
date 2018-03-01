@@ -2,19 +2,9 @@
 name: SERUM TÁI TẠO DA - MULTI REPAIR SERUM
 price: 480,000 VND
 size: 30 ml
-introduction: HUYẾT THANH TÁI TẠO DA. Loại bỏ các tế bào chết trên da. Phục hồi tế bào hư tổn, tái tạo mô tế bào mới. Làm mờ nếp nhăn, vết nám, đốm nâu, tàn nhang,... ngăn ngừa tình trạng lão hóa da sớm, duy trì sự tươi trẻ cho da. Làm mờ và liền sẹo, đặc biệt các vết sẹo thâm, sẹo rỗ do mụn, sẹo do vết thương. Thu nhỏ lỗ chân lông, làm săn chắc da, tăng khả năng đàn hồi cho da, chống chảy sệ Trị mụn, đặc biệt mụn trứng cá.
 use: Dùng sau toner, trước lotion, cream. Mỗi lần dùng 3-5 giọt lên tay, vỗ đều lên mặt cho thấm hết.
-source: multirepair.jpg
-ingredient: 
-- item: Purified water
-  action:
-- item: Niacinamide
-  action:
-- item: Snail secretion filtrated 98,9%
-  action:
-- item: Tocopherol
-  action:
-- item: Optiphen
-  action:
+ingredient: Updating
 ---
-
+HUYẾT THANH TÁI TẠO DA. Giúp phục hồi độ ẩm cần thiết cho làn da, làm nền da trở nên căng mọng, bóng, sáng. Giúp phục hồi tổn thương da do nắng, do mụn. Giúp làm mờ vết thâm nhanh, vết nám, làm đều màu da. Ngăn ngừa tình trạng mất nước, tình trạng lão hóa sớm. Thu nhỏ lỗ chân lông, làm săn chắc da, tăng khả năng đàn hồi cho da. Ngăn ngừa sự hình thành mụn cám, mụn đầu đen..
+* Vitamin B3 nồng độ cao : Hay còn được gọi là niacinamide, là một trong những nguyên tố vitamin đã được nghiên cứu xác định lợi ích của nó đối với da và tóc con người.Trong cơ thể chúng ta có 2 loại enzyme rất quan trọng ( NADH và NADPH ) góp phần tạo ra năng lượng cho hoạt động tế bào, sản sinh collagen và chất béo (giúp nuôi dưỡng và tăng trưởng tế bào). Nếu duy trì được nguồn cung cấp đầy đủ cả hai enzyme này, làn da của bạn sẽ tạo ra một rào cản hiệu quả các yếu tố bên ngoài tác động đến quá trình lão hóa da . Tuy nhiên, mức độ của cả hai NADH và NADPH suy giảm khi chúng ta già đi. Việc bổ sung Vitamin B3 (bằng cách bôi ngoài da, không phải uống) có khả năng ngăn ngừa và giảm tốc độ suy giảm 2 loại enzyme này.Vì việc dùng niacinamide có thể giúp bảo toàn mức độ NADH và NADPH , nó góp phần hỗ trợ lớp rào cản của da chống lại các chất ô nhiễm và các chất kích thích khác . Kết quả là, những khiếm khuyết về da như mụn trứng cá, mụn bọc sưng, mụn đỏ và các dấu hiệu viêm da khác có thể được xử lý.Ngoài ra vitamin B3 còn giúp cải thiện cấu trúc da, đẩy lui sự xuất hiện của các tế bào melanin, làm da sáng hồng rạng rỡ, làm mờ các đốm nâu, thâm nám.
+* Dịch ốc sên nguyên chất từ Chi-le đạt độ tinh khiết đến 98,9% với hàm lượng protein vượt trội 16.300mg/lít. Dịch ốc sên chứa rất nhiều proteins, collagen, hyaluronic acids, allantoin, elastin, glycolic acids, chất chống oxy hóa đâm đặc.Ốc sên tiết ra dịch để giúp nó bôi trơn, làm lành và liền lớp vỏ cứng trong quá trình di chuyển có thể bị tổn thương. Do đặc tính tự nhiên và tự bảo vệ quá trình sinh tồn của nó mà dịch ốc sên có đầy đủ các yếu tố giúp phục hồi và nuôi dưỡng các tế bào sống, đẩy nhanh quá trình làm liền sẹo, tái tạo tế bào bị tổn thương. Sử dụng dịch chiết ốc sên lên cơ thể con người là một bước tiến trong quá trình nghiên cứu các sản phẩm làm đẹp và duy trì sự tươi trẻ. Hàm lượng protein của tinh chất ốc sên Made in Chile lên đến 16.300mg/Lit, cao gấp nhiều trăm lần so với lượn protein từ các loại ốc sên bình thường của Peru và các nước khác (chỉ khoảng 200mg/Lit), đảm bảo nguyên chất không pha loãng.Để sản xuất được 1 lít dịch ốc sên chưa qua tinh chế (lọc bỏ tạp chất) cần đến 6000 con ốc sên trong vòng 3-4 tuần được nuôi dưỡng và cho ăn đầy đủ chất dinh dưỡng cần thiết. Do đó, giá một lít dịch ốc sên tinh khiết là vô cùng đắt đỏ. Các loại kem trên thị trường hầu như chỉ chứa một hàm lượng vô cùng thấp dịch ốc sên hàm lượng protein thấp (để có giá thành sản xuất thấp). 

@@ -1,28 +1,45 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script>
-		$(document).ready(function(){
-			$("button").click(function(){
-				$("#div1").load("text.txt h1", function(responseTxt, statusTxt, xhr){
-					if(statusTxt == "success"){
-						alert("External contest loaded successfully!");
-						console.log(responseTxt);
-						console.log(statusTxt);
-						console.log(xhr);
-					}
-				});
-			})
-		})
-	</script>
-	<title></title>
+<script>
+
+function setCookie(cname,cvalue,exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    var expires = "expires=" + d.toGMTString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie(cname) {
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for(var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+
+function checkCookie() {
+    var user=getCookie("username");
+    if (user != "") {
+        alert("Welcome again " + user);
+    } else {
+       user = prompt("Please enter your name:","");
+       if (user != "" && user != null) {
+           setCookie("username", user, 30);
+       }
+    }
+}
+
+</script>
 </head>
-<body>
-
-<div id="div1"><h2>Let Jquery AJAX Change This Text</h2></div>
-
-<button>Get External Content</button>
-
+<body onload="checkCookie()">
 </body>
 </html>

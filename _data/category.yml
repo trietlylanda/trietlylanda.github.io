@@ -13,7 +13,7 @@
       path: tai_tao_da
       product: 
         - renewal
-        - my_own_sceret
+        - my_own_secret
         - multi_repair
         - youth
         - sen_to_tam
@@ -22,13 +22,12 @@
       product: 
         - tieu_viem
         - oil_control
-        - de_tox
+        - detox
         - hope
         - the_first_time
     - name: Làm sạch
       path: lam_sach
-      product: 
-        - squalane
+      product:
         - micellar
         - floral
         - greentea
@@ -36,24 +35,16 @@
 - name: Trang điểm
   path: trang_diem
   child:
-    - name: Son Pha Lê "Crystal"
-      path: crystal
+    - name: Son
+      path: son
       product:
-        - hot_red
-        - true_love
-        - first_love
-        - crush
-        - valentine
-        - feline
-    - name: Son Kem Li - LOVE
-      path: love
+        - love
+        - crystal
+        - lip_renewal_complex
+    - name: Phấn
+      path: phan
       product:
-        - agape
-        - ludus
-        - storge
-        - eros
-        - mania
-        - pragma
+        - cushion_hong_sam
 - name: Chăm sóc cơ thể và tóc
   path: cham_soc_co_the_va_toc
   child:
@@ -65,7 +56,7 @@
         - soap_oai_huong
         - soap_huong_thao
         - soap_hoa_nhai
-        - body_lotion
+        - after_sun
         - satin_oil
     - name: Chăm sóc tóc
       path: cham_soc_toc

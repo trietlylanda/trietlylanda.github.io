@@ -89,8 +89,8 @@
      and doesn't provide the no-stacking-on-mobiles class */
   .grid:not(.no-stacking-on-mobiles) > .unit {
     width: 100% !important;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 0px;
+    padding-right: 0px;
   }
   .unit .grid .unit {
     padding-left: 0px;
@@ -117,5 +117,5 @@
 
 //Additional for show products
 @media screen and (max-width: 1024px) {
-  .grid .half,  .grid .x-1-2 { width: 50%!important; }
+  .grid .x-1-2 { width: 50%!important; }
 }

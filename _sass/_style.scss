@@ -4,9 +4,9 @@ $noti-red: #ED1A36;
 
 html{
 	box-sizing: border-box;
-	font-size: 15px;
+	font-size: 14px;
 
-	@media screen and (min-width: 900px){
+	@media screen and (min-width: 568px){
 		font-size: 16px;
 	}
 
@@ -96,7 +96,10 @@ header{
 			padding: 0;
 			overflow: hidden;
 			.dropdown:nth-child(1), :nth-child(2){
-				padding-right: 1rem;
+				padding-right: 1.5rem;
+				@media screen and (max-width: 400px){
+					padding-right: 1rem;
+				}
 			}
 			.dropdown{
 				float: left;
@@ -105,6 +108,9 @@ header{
 					color: #555;
 					font-weight: 400;
 					font-size: 1.1rem;
+					@media screen and (max-width: 400px){
+						font-size: 0.9rem;
+					}
 					line-height: 1.3rem;
 					padding: 10px 0px;
 					text-transform: uppercase;
@@ -248,16 +254,6 @@ header{
 				opacity: 1;
 			}
 		}
-		@media screen and (max-width: 1000px) {
-			.img_container{
-				.description{
-					padding: 0.3rem 0.5rem;
-					p{
-						font-size: 0.6rem;
-					}
-				}
-			}
-		}
 	}
 }
 /* End slider */
@@ -266,11 +262,12 @@ header{
 .main_product{
 	margin-top: 1rem;
 	.title{
-		border-top: 1px #000 solid;
-		h2{
-			font-size: 1.7rem;
-			font-weight: 100;
-		}
+		font-size: 1.7rem;
+		font-weight: 300;
+		color: #333;
+		line-height: 2rem;
+		padding: 1rem;
+		border-top: 1px solid #e6e6e6;
 	}
 }
 /* End Main Product */
@@ -362,7 +359,10 @@ footer{
 	}
 	.gallery{
 		margin: 0px;
-		padding: 0px 1.7rem 1.7rem 1.7rem;
+		padding: 0 1.7rem 1.7rem 2rem;
+		// @media screen and (max-width: 568px){
+		// 	padding: 2rem;
+		// }
 		a{
 			.contentP{
 				position: relative;
@@ -428,10 +428,10 @@ footer{
 	}
 	.name{
 		color: #333;
-		line-height: 1.5rem;
+		font-size: 1.7em;
+		line-height: 1.9rem;
 		text-transform: uppercase;
-		font-size: 1.3rem;
-		font-weight: 300;
+		font-weight: 400;
 		padding-bottom: 0.3rem;
 		border-bottom: 1px solid #999;
 	}
@@ -445,23 +445,17 @@ footer{
 		font-weight: 300;
 	    padding: 0.5rem 0;
 	}
-	.quantityAddcart{
-		margin: 0.5rem 0px;
-		padding: 0.5rem;
-		background-color: #e6e6e6;
-		color: #111;
-		button{
-		    background-color: #DC3912;
-		    border: none;
-		    color: white;
-		    padding: 0.8rem 1.8rem;
-		    text-align: center;
-		    text-decoration: none;
-		    display: inline-block;
-		    font-size: 1rem;
-		    margin: 0.2rem 0.1rem;
-		    cursor: pointer;
-		}
+	button{
+	    background-color: #DC3912;
+	    border: none;
+	    color: white;
+	    padding: 0.8rem 1.8rem;
+	    text-align: center;
+	    text-decoration: none;
+	    display: inline-block;
+	    font-size: 1rem;
+	    margin: 0.2rem 0.1rem;
+	    cursor: pointer;
 	}
 	.title{
 		color: #333;

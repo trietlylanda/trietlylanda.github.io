@@ -1,30 +1,32 @@
-<div class="grid show">
-	{% for item in items %}
-		{% for post in site.product %}
-			{% assign str = post.path | split: "/" %}
-			{% assign str = str.last | remove: ".md" %}
-			{% if item ==  str %}
-				{% assign link = post.path | replace: ".md", ".html"%}
-				{% assign link = link | replace: "_product", "product" %}
-				<div class="unit w-1-3 x-1-2">
-					<div class="gallery">
-						<a href="{{site.url}}/{{ link }}">
-							<div class="contentP">
-								<img src="/img/product/{{ post.source }}">
-								<div class="detail">
-									<div class="up"></div>
-									<div class="down">Xem chi tiết</div>
+<div class="show">
+	<div class="grid">
+		{% for item in items %}
+			{% for post in site.product %}
+				{% assign str = post.path | split: "/" %}
+				{% assign str = str.last | remove: ".md" %}
+				{% if item == str %}
+					{% assign link = post.path | replace: ".md", ""%}
+					{% assign link = link | replace: "_product", "product" %}
+					<div class="unit w-1-3 x-1-2">
+						<div class="gallery">
+							<a href="{{site.url}}/{{ link }}">
+								<div class="contentP">
+									<img src="/img/product/{{ str }}.jpg">
+									<div class="detail">
+										<div class="up"></div>
+										<div class="down">Xem chi tiết</div>
+									</div>
 								</div>
-							</div>
-							<div class="desc">
-								<div class="name">{{ post.name }}</div>
-								<div class="price">{{ post.price }}</div>
-							</div>
-						</a>
+								<div class="desc">
+									<div class="name">{{ post.name }}</div>
+									<div class="price">{{ post.price }}</div>
+								</div>
+							</a>
+						</div>
 					</div>
-				</div>
-			{% endif %}
+				{% endif %}
+			{% endfor %}
 		{% endfor %}
-	{% endfor %}
+	</div>
 </div>
 
