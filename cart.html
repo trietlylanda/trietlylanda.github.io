@@ -15,13 +15,13 @@ layout: default
 		<div class="unit w-1-1">
 			<div class="cart-header">
 				<div class='grid'>
-					<div class='unit w-2-5'>
+					<div class='unit w-3-5'>
 						SAN PHAM
 					</div>
 					<div class='unit w-1-5'>
 						SO LUONG
 					</div>
-					<div class='unit w-2-5'>
+					<div class='unit w-1-5'>
 						TONG CONG
 					</div>
 				</div>
@@ -49,7 +49,7 @@ layout: default
 	}
 
 	function generateHTMLStr(name, num){
-		var str = "<div class='cart_row'><div class='grid'><div class='unit w-2-5'>" + name + "</div><div class='unit w-1-5'>" + num + "</div><div class='unit w-2-5'>" + "???" + "</div></div></div>" ;
+		var str = "<div class='cart_row'><div class='grid'><div class='unit w-3-5'>" + "<img src='/img/product/" + name + ".jpg'  width='100'>" + name + "</div><div class='unit w-1-5'>" + num + "</div><div class='unit w-1-5'>" + "???" + "</div></div></div>" ;
 		return str;
 	}
 
