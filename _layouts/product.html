@@ -10,9 +10,9 @@ layout: default
 			<div class="grid">
 				<div class="unit w-1-2">
 					<div class="image">
-						{% assign image = page.path | split: "/" %}
-						{% assign image = image.last | remove: ".md" %}
-						<img src="../../../img/product/{{ image }}.jpg">
+						{% assign fn = page.path | split: "/" %}
+						{% assign fn = fn.last | remove: ".md" %}
+						<img src="../../../img/product/{{ fn }}.jpg">
 					</div>
 					
 				</div>
@@ -61,42 +61,54 @@ layout: default
 	</div>
 </section>
 
-<script type="text/javascript">			
-	function setCookie(cname,cvalue,exdays) {
-	    var d = new Date();
-	    d.setTime(d.getTime() + (exdays*24*60*60*1000));
-	    var expires = "expires=" + d.toGMTString();
-	    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+<script type="text/javascript">
+	function setCookie(cname, cvalue, exdays){
+		var d = new Date();
+		d.setTime(d.getTime() + (exdays*24*60*60*1000));
+		var expires = "expires" + d.toGMTString();
+		document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 	}
 
-	function getCookie(cname) {
-	    var name = cname + "=";
-	    var ca = document.cookie.split(';');
-	    for(var i = 0; i < ca.length; i++) {
-	    	var c = ca[i];
-	        while (c.charAt(0) == ' ') {
-	            c = c.substring(1);
-	        }
-	        if (c.indexOf(name) == 0) {
-	            return c.substring(name.length, c.length);
-	        }
-	    }
-	    return "";
+	function getCookie(cname){
+		var name = cname + "=";
+		var ca = document.cookie.split(';');
+		for(var i=0; i<ca.length; i++){
+			var c = ca[i];
+			while(c.charAt(0) == ' '){
+				c = c.substring(1);
+			}
+			if(c.indexOf(name) == 0){
+				return c.substring(name.length, c.length);
+			}
+		}
+		return "";
 	}
 
-	function checkCookie() {
-	    var num=parseInt(getCookie("num"));
-	    if (num != 0) {
-	    	setCookie("num", num+1, 365);
-	    } else {
-	    	setCookie("num", 1, 365);
-	    }
+	function checkCookie(){
+		var cartStr = getCookie("cart");
+		var cartObj = [];
+		var i= "";
+		var on=false;
+		if(cartStr != ""){
+			//there is at least one object in cart
+			cartObj = JSON.parse(cartStr);
+			//check if object in cartObj or not
+			for(i in cartObj){
+				if(cartObj[i].name == "{{ fn }}"){
+					on = true;
+				}
+			}
+		}
+		if(on == false){
+			cartObj.push({name:"{{ fn }}",quantity: 1});
+		}
+		cartStr = JSON.stringify(cartObj);
+		setCookie("cart", cartStr, 365);
+		window.location = "{{ site.url }}/cart";
 	}
 
 	document.getElementById("addToCart").addEventListener("click", function(event){
 		checkCookie();
-		console.log(document.cookie);
-		window.location = ""
 	    event.preventDefault();
 	});
 </script>
