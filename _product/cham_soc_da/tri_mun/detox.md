@@ -1,6 +1,4 @@
 ---
-name: MẶT NẠ THAN HOẠT TÍNH - DETOX
-price: 150,000 VND
 size: 50 gr
 use: Dùng sau khi rửa mặt sạch, thoa đều lên mặt, để khô trong vòng 10-15p, rửa lại bằng nước sạch.
 ingredient: Activated Bamboo Charcoal (than tre hoạt tính), Bùn bentonite, đất sét Kaolin, Rose mary powder (bột hương thảo), Vitamin K, Vitamin E, nước lô hội chưng cất,...

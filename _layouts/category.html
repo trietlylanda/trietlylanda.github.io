@@ -6,19 +6,26 @@ layout: default
 <div class="grid">
 	{% include category.html %}
 	<div class="unit w-4-5">
-		{% assign items = NULL %}
-		{% assign url = page.path  | split: "/" %}
-		{% for section in site.data.category %}
-		{% if url[1] contains section.path %}
-			{% for child in section.child %}
-			{% if url[2] contains 'index.html' or url[2] contains child.path %}
-				{% assign items = items | concat: child.product%}
-			{% endif %}
-			{% endfor %}
-		{% endif %}
-		{% endfor %}
-
-		{% include show.html %}
+		<div class="show">
+			<div class="grid">
+				{% assign url = page.path  | split: "/" %}
+				{% for section in site.data.category %}
+					{% if url[1] contains section.path %}
+						{% for child in section.child %}
+						{% if url[2] contains 'index.html' or url[2] contains child.path %}
+							{% assign link = section.path %}
+							{% assign link = link | append: "/" %}					
+							{% assign link = link | append: child.path %}
+							{% assign items = items | concat: child.product %}
+								{% for item in items%}	
+									{% include short_cut.html %}
+								{% endfor %}
+						{% endif %}
+						{% endfor %}
+					{% endif %}
+				{% endfor %}
+			</div>
+		</div>
 	</div>
 	<div class="clear"></div>
 </div>

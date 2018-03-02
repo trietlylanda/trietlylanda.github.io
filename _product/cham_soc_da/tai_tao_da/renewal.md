@@ -1,6 +1,4 @@
 ---
-name: KEM DƯỠNG TÁI TẠO DA - RENEWAL
-price: 335,000 VND
 size: 30 gr
 use: Lấy một lượng vừa đủ sản phẩm chấm lên 5 điểm (trán, cằm, mũi, 2 má) và thoa đều. Sử dụng ngày 2 lần sáng – tối.
 ingredient: Updating

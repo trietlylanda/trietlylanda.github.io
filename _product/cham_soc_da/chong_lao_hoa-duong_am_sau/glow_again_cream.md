@@ -1,6 +1,4 @@
 ---
-name: KEM DƯỠNG CHỐNG LÃO HÓA - GLOW AGAIN
-price: 550,000 VND
 size: 30 gr
 use: Lấy một lượng sản phẩm vừa đủ chấm lên 5 điểm (trán, cằm, mũi, hai má) và thoa đều. Sử dụng ngày 2 lần (sáng và tối).
 ingredient:  Distilled water, Glucosamine, Bee Venom, Propanediol, Ceramide 3, Ceramide 6 II, Ceramide 1, Phytosphingosine, Cholesterol,Ten's up (Cichorium Intybus (Chicory) Root Oligosacchar, Caesalpinia Spinosa Gum , Glycerin), Tetradecyl Aminobutyroylvalylaminobutyric Urea Trifluoroacetate, Magnesium Chloride, Dimethicone (and) Aqua (and) Glycerin (and) Pentylene glycol (and) Dimethicone/Vinyl Dimethicone Crosspolymer (and) Amodimethicone (and) Carbomer (and) Phenoxyethanol (and) Sodium Hydroxide (and) Disodium EDTA, Tocopherol, Sodium Hyaluronate, Sea Kelp extract, Niacinamide, Panthenol, Allantoin, Caprilic Triglyceride, Hydroxyethylacrylate / sodium acryloyldimethyltaurate copolymer, Hydrogenatedpolydecene, Polysorbate 80, Saliguard, Fragrance.

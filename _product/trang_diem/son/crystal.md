@@ -1,6 +1,4 @@
 ---
-name: SON THỎI LÌ - CRYSTAL
-price: 320,000 VND
 size: Updating
 use: Updating
 ingredient: Updating

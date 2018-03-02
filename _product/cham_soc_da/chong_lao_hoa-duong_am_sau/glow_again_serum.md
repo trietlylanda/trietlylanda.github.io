@@ -1,6 +1,4 @@
 ---
-name: SERUM CHỐNG LÃO HÓA - GLOW AGAIN
-price: 500,000 VND
 size: 30 ml
 use: Sau khi làm sạch và cân bằng da, nhỏ 2-3 giọt lên tay, vỗ đều lên mặt cho thấm hết
 ingredient: Updating

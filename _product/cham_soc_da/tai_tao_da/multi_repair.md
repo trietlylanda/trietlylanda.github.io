@@ -1,6 +1,4 @@
 ---
-name: SERUM TÁI TẠO DA - MULTI REPAIR SERUM
-price: 480,000 VND
 size: 30 ml
 use: Dùng sau toner, trước lotion, cream. Mỗi lần dùng 3-5 giọt lên tay, vỗ đều lên mặt cho thấm hết.
 ingredient: Updating

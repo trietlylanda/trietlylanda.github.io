@@ -1,6 +1,4 @@
 ---
-name: MẶT NẠ HỒNG SÂM
-price: 550,000 VND
 size: 30 gr
 use: Chấm đều lên nhiều điểm trên mặt rồi massage nhẹ nhàng, để trong 20p rồi rửa đi, tiếp tục dưỡng tiếp với các bước dưỡng da khác. Dùng hàng ngày.
 ingredient: Cao hồng sâm (cao tinh chế từ hồng sâm hàn quốc 6 năm tuổi), linh chi cổ thụ, mật ong hoa nhãn, sữa ong chúa , hoa sen, hoa nhài, hoa hồng, rễ dâu tằm, bạch chỉ, phục linh, bạch cương tàm, cam thảo bắc và một số thảo dược đặc biệt quí hiếm ...

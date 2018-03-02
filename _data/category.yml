@@ -4,62 +4,126 @@
     - name: Chống lão hóa dưỡng ẩm sâu
       path: chong_lao_hoa-duong_am_sau
       product:
-        - glow_again_serum
-        - glow_again_cream
-        - mat_na_hong_sam
-        - fantasy_blue
-        - sua_gao
+        - name: serum chống lão hóa - glow again
+          path: glow_again_serum
+          price: 500
+        - name: kem dưỡng chống lão hóa - glow again
+          path: glow_again_cream
+          price: 550
+        - name: mặt nạ hồng sâm
+          path: mat_na_hong_sam
+          price: 550
+        - name: toner hoa đậu biếc - fantasy blue
+          path: fantasy_blue
+          price: 280
+        - name: essence sữa gạo-galactomyces treatment essence
+          path: sua_gao
+          price: 250
     - name: Tái tạo da
       path: tai_tao_da
       product: 
-        - renewal
-        - my_own_secret
-        - multi_repair
-        - youth
-        - sen_to_tam
+        - name: kem dưỡng tái tạo da - renewal
+          path: renewal
+          price: 335
+        - name: toner hương hoa hồng sáng da - my own secret
+          path: my_own_secret
+          price: 280
+        - name: serum tái tạo da - multi repair serum
+          path: multi_repair
+          price: 480
+        - name: dầu dưỡng tăng cường - youth booster oil
+          path: youth
+          price: 550
+        - name: mặt nạ sen tơ tằm
+          path: sen_to_tam
+          price: 300
     - name: Trị mụn
       path: tri_mun
       product: 
-        - tieu_viem
-        - oil_control
-        - detox
-        - hope
-        - the_first_time
+        - name: mặt nạ tiêu viêm
+          path: tieu_viem
+          price: 430
+        - name: serum cho da dầu mụn - oil control serum
+          path: oil_control
+          price: 450
+        - name: mặt nạ than hoạt tính - detox
+          path: detox
+          price: 150
+        - name: kem dưỡng da dầu mụn - hope
+          path: hope
+          price: 425
+        - name: toner hương trà xanh cho da dầu mụn - the first time
+          path: the_first_time
+          price: 280
     - name: Làm sạch
       path: lam_sach
       product:
-        - micellar
-        - floral
-        - greentea
-        - the_neutral
+        - name: sữa rửa mặt sạch sâu - micellar cleansing gel
+          path: micellar
+          price: 315
+        - name: sữa rửa mặt floral - gentle cleansing gel
+          path: floral
+          price: 315
+        - name: nước tẩy trang dịu nhẹ - greentea
+          path: greentea
+          price: 200
+        - name: gel tẩy tế bào chết - the neutral
+          path: the_neutral
+          price: 350
 - name: Trang điểm
   path: trang_diem
   child:
     - name: Son
       path: son
       product:
-        - love
-        - crystal
-        - lip_renewal_complex
+        - name: son kem lì - love
+          path: love
+          price: 350
+        - name: son thỏi lì - crystal
+          path: crystal
+          price: 320
+        - name: son dưỡng hồng môi - lip renewal complex
+          path: lip_renewal_complex
+          price: 200
     - name: Phấn
       path: phan
       product:
-        - cushion_hong_sam
+        - name: son thỏi lì - crystal
+          path: cushion_hong_sam
+          price: 600
 - name: Chăm sóc cơ thể và tóc
   path: cham_soc_co_the_va_toc
   child:
     - name: Chăm sóc cơ thể
       path: cham_soc_co_the
       product:
-        - baby_skin
-        - soap_hoa_cuc
-        - soap_oai_huong
-        - soap_huong_thao
-        - soap_hoa_nhai
-        - after_sun
-        - satin_oil
+        - name: gel tẩy tế bào chết và tắm trắng - baby skin whitening massage gel
+          path: baby_skin
+          price: 300 
+        - name: soap hoa cúc dịu da
+          path: soap_hoa_cuc
+          price: 160
+        - name: soap oải hương thư giãn
+          path: soap_oai_huong
+          price: 160
+        - name: soap hương thảo cho da mụn
+          path: soap_huong_thao
+          price: 160
+        - name: soap hoa nhài sáng da
+          path: soap_hoa_nhai
+          price: 160
+        - name: body lotion - after sun
+          path: after_sun
+          price: 350
+        - name: dầu dưỡng body và hair - satin oil
+          path: satin_oil
+          price: 310
     - name: Chăm sóc tóc
       path: cham_soc_toc
       product:
-        - hair10_100
-        - hair10_220
+        - name: dầu gội trị gàu và kích thích mọc tóc - hair 10 (100 ml)
+          path: hair10_100
+          price: 250
+        - name: dầu gội trị gàu và kích thích mọc tóc - hair 10 (220 ml)
+          path: hair10_220
+          price: 400

@@ -1,6 +1,4 @@
 ---
-name: ESSENCE SỮA GẠO-Galactomyces Treatment Essence
-price: 250,000 VND
 size: 100 ml
 use: Lấy một lượng vừa đủ vỗ nhẹ lên da. Dùng sau bước serum. Thích hợp làm lotion mask.
 source: suagao.jpg

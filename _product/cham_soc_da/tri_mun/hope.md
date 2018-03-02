@@ -1,6 +1,4 @@
 ---
-name: KEM DƯỠNG DA DẦU MỤN - HOPE
-price: 425,000 VND
 size: 30 gr
 use: Lấy một lượng vừa đủ sản phẩm chấm lên 5 điểm (trán, cằm, mũi, 2 má) và thoa đều. Sử dụng ngày 2 lần sáng – tối.
 ingredient: Camellia sinensis extract, Watercress extract, Sea Kelp extract, Niacinamide, Tocopheryl, Barbadensis hydrosol, Camellia sinensis extract, Ivy extract, Saponaria extract, Sea Kelp extract, Niacinamide, Burdock root extract, Sage extract, Saponaria extract, Bladderwrack extract, Comprey leaves extract, Melaleuca alternifolia oil, Neem oil, Salicylic 0,5%, Barbadensis hydrosol, Lemon peel extract, Ivy extract, Comprey leaves extract, Melaleuca alternifolia oil, Neem oil, Retinyl palmitate, Salicylic 0,5%. 

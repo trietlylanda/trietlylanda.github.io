@@ -1,6 +1,4 @@
 ---
-name: SON KEM LÌ - LOVE
-price: 350,000 VND
 size: Updating
 use: Updating
 ingredient: Updating

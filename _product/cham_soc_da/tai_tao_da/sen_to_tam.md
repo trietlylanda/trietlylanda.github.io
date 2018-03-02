@@ -1,6 +1,4 @@
 ---
-name: MẶT NẠ SEN TƠ TẰM
-price: 300,000 VND
 size: 75 grams
 use: Dùng sau khi rửa mặt sạch, thoa đều lên mặt, để khô trong vòng 10-15 phút, rửa lại bằng nước sạch. Có thể dùng 5 phút lúc sáng sớm hoặc trước khi make up để có 1 lớp nền căng đầy mọng mịn.
 ingredient: Updating

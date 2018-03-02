@@ -13,16 +13,28 @@ layout: default
 						{% assign fn = page.path | split: "/" %}
 						{% assign fn = fn.last | remove: ".md" %}
 						<img src="../../../img/product/{{ fn }}.jpg">
-					</div>
-					
+					</div>		
 				</div>
+				{% for section in site.data.category %}
+					{% for child in section.child %}
+						{% for item in child.product %}
+							{% assign link = section.path %}
+							{% assign link = link | append: "/" %}					
+							{% assign link = link | append: child.path %}
+							{% if item.path == fn %}
+								{% assign name = item.name %}
+								{% assign price = item.price %}
+							{% endif %}
+						{% endfor %}
+					{% endfor %}
+				{% endfor %}
 				<div class="unit w-1-2">
-					<div class="name">{{ page.name }}</div>
+					<div class="name">{{ name }}</div>
 					<div class="size">
 						<span style="margin-right: 10px; color: #333;">Size:</span>
 						<span>{{ page.size }}</span>
 					</div>
-					<div class="price">{{ page.price }}</div>
+					<div class="price">{{ price }},000 VND</div>
 					<button id="addToCart">THÊM VÀO GIỎ</button>
 					<div class="detail">
 						<div class="title">

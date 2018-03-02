@@ -1,6 +1,4 @@
 ---
-name: BODY LOTION - AFTER SUN
-price: 350,000 VND
 size: 220 ml
 use: Bôi toàn thân sau tắm hoặc sau khi đi nắng về.
 ingredient: Nước ép lô hội, Hyaluronic acid, DL-Panthenol, Niacinamide, chiết xuất cám gạo, tinh dầu lô hội, dầu jojoba, nước ép 5 loại hoa hồng.

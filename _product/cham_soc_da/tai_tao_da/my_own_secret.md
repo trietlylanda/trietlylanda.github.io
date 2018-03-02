@@ -1,6 +1,4 @@
 ---
-name: TONER HƯƠNG HOA HỒNG SÁNG DA - MY OWN SECRET
-price: 280,000 VND
 size: 150 ml
 use: Dạng xịt. Xịt trực tiếp lên mặt, hoặc xịt gián tiếp lên tay và bông rồi thoa lên mặt. Dùng sau sữa rửa mặt. Kết hợp với bộ sản phẩm dành cho da mụn để tối ưu hóa kết quả.
 ingredient: Rose hydrosol (nước chưng cất hoa hồng), Aloe hydrosol (nước chưng cất lô hội), Camellia sinensis extract (chiết xuất trà xanh), tinh dầu hoa hồng Bulgary, tinh dầu hoa cúc la mã, dầu nhài nguyên chất, Vitamin E, dầu Jojoba, Acid Hyaluronic, Vitamin C, ...

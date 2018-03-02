@@ -1,6 +1,4 @@
 ---
-name: SON DƯỠNG HỒNG MÔI - LIP RENEWAL COMPLEX
-price: 200,000 VND
 size: 15 gr
 use: Thoa lên môi khi thấy khô. Thoa một lớp dày trước khi đi ngủ để tăng hiệu quả rõ rệt nhất. 
 ingredient: shea butter, cacao butter, aloe vera butter, mango seed butter, avocado butter, lanolin, argan oil, sweet almond oil, shea oil, rice bran oil, carrot seed oil, red rasberry seed oil, pomegranate seed oil, dầu gấc, bee wax, honey, vitamin complex (B-E-K), peach extract, apricot kernet extract,...

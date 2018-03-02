@@ -31,6 +31,26 @@ overview: true
 			<div class="title">SẢN PHẨM NỔI BẬT</div>
 		</div>
 	</div>
-	{% assign items = site.data.main_product %}
-	{% include show.html %}
+	<div class="grid">
+		<div class="unit w-1-1">
+			<div class="show">
+				<div class="grid">
+					{% for section in site.data.category %}
+						{% for child in section.child %}
+							{% for item in child.product %}
+								{% assign link = section.path %}
+								{% assign link = link | append: "/" %}					
+								{% assign link = link | append: child.path %}
+								{% for x in site.data.main_product %}
+									{% if item.path == x %}
+										{% include short_cut.html %}
+									{% endif %}
+								{% endfor %}
+							{% endfor %}
+						{% endfor %}
+					{% endfor %}					
+				</div>
+			</div>
+		</div>
+	</div>
 </section>
