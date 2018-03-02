@@ -48,25 +48,47 @@ layout: default
 		return "";
 	}
 
-	function generateHTMLStr(name, num){
-		var str = "<div class='cart_row'><div class='grid'><div class='unit w-3-5'>" + "<img src='/img/product/" + name + ".jpg'  width='100'>" + name + "</div><div class='unit w-1-5'>" + num + "</div><div class='unit w-1-5'>" + "???" + "</div></div></div>" ;
+	function generateHTMLStr(name, path, price, num){
+		var str = "<div class='cart_row'><div class='grid'><div class='unit w-3-5'>" + "<img src='/img/product/" + path + ".jpg'  width='100'>" + name + "</div><div class='unit w-1-5'>" + num + "</div><div class='unit w-1-5'>" + price*num + ",000VND" + "</div></div></div>" ;
 		return str;
 	}
 
-	function displayCart(){
+	function ajax_get(url, callback){
+		var xmlhttp = new XMLHttpRequest();
+		xmlhttp.onreadystatechange = function(){
+			if(xmlhttp.readyState == 4 && xmlhttp.status == 200){
+				try{
+					var data = JSON.parse(xmlhttp.responseText);
+				} catch(err) {
+					console.log(err.message + " in " + xmlhttp.responseText);
+					return;
+				}
+				callback(data);
+			}
+		};
+		xmlhttp.open("GET", url, true);
+		xmlhttp.send();
+	}
+
+	ajax_get('strObj.html', function(data){
+		var i, j, k, l, str= "";
 		var cartStr = getCookie("cart");
-		var i, x = "";
 		if(cartStr != ""){
 			var cartObj = JSON.parse(cartStr);
-			for(i in cartObj){
-				x += generateHTMLStr(cartObj[i].name, cartObj[i].quantity);
+			for(i in data){
+				for(j in data[i].child){
+					for(k in data[i].child[j].product){
+						var x = data[i].child[j].product[k];
+						for(l in cartObj){
+							if(cartObj[l].name == x.path)
+							str += generateHTMLStr(x.name, x.path, x.price, cartObj[l].quantity);
+						}
+					}
+				}
 			}
-			document.getElementById("content").innerHTML = x;
+			document.getElementById("content").innerHTML = str;
 		} else {
 			document.getElementById("content").innerHTML = "Ban chua mua gi ca";
 		}
-	}
-
-	displayCart();
-	
+	});
 </script>

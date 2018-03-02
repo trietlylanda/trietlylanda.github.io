@@ -1,0 +1,32 @@
+---
+---
+{% assign strObj = '[' %}
+{% for section in site.data.category %}
+	{% assign strObj = strObj | append: '{"name":"' %}
+	{% assign strObj = strObj | append: section.name %}
+	{% assign strObj = strObj | append: '","path":"' %}
+	{% assign strObj = strObj | append: section.path %}
+	{% assign strObj = strObj | append: '","child":[' %}
+	{% for child in section.child %}
+		{% assign strObj = strObj | append: '{"name":"' %}
+		{% assign strObj = strObj | append: child.name %}
+		{% assign strObj = strObj | append: '","path":"' %}
+		{% assign strObj = strObj | append: child.path %}
+		{% assign strObj = strObj | append: '","product":[' %}
+		{% for item in child.product %}
+			{% assign strObj = strObj | append: '{"name":"' %}
+			{% assign strObj = strObj | append: item.name %}
+			{% assign strObj = strObj | append: '","path":"' %}
+			{% assign strObj = strObj | append: item.path %}
+			{% assign strObj = strObj | append: '","price":"' %}
+			{% assign strObj = strObj | append: item.price %}
+			{% assign strObj = strObj | append: '"},' %}
+		{% endfor %}
+		{% assign strObj = strObj | append: ']},' %}
+	{% endfor %}
+	{% assign strObj = strObj | append: ']},' %}
+{% endfor %}
+{% assign strObj = strObj | append: ']' %}
+{% assign strObj = strObj | replace: '},]', '}]' %}
+
+{{strObj}}
