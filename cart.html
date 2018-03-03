@@ -2,37 +2,78 @@
 layout: default
 ---
 
-<section class="cart">
+<section id="cart" style="display: block">
 	<div class="grid">
 		<div class="unit w-1-1 align-center">
 			<div class="title">GIỎ HÀNG CỦA BẠN</div>
 		</div>
 	</div>
 	<div class="grid hide-on-mobiles">
-		<div class="unit w-1-1">
-			<div class="cart-header">
-				<div class="grid hide-on-mobiles">
-					<div class="unit w-1-5 align-left">
-						SẢN PHẨM
-					</div>
-					<div class="unit w-1-5 align-left" style="opacity:0">TÊN
-					</div>
-					<div class="unit w-1-5 align-center">
-						ĐƠN GIÁ
-					</div>
-					<div class="unit w-1-5 align-center">
-						SỐ LƯỢNG
-					</div>
-					<div class="unit w-1-5 align-right">
-						THÀNH TIỀN
-					</div>
+		<div class="cart-header">
+			<div class="grid">
+				<div class="unit w-1-5 align-left">
+					SẢN PHẨM
+				</div>
+				<div class="unit w-1-5 align-left" style="opacity:0">
+					TÊN
+				</div>
+				<div class="unit w-1-5 align-center">
+					ĐƠN GIÁ
+				</div>
+				<div class="unit w-1-5 align-center">
+					SỐ LƯỢNG
+				</div>
+				<div class="unit w-1-5 align-right">
+					THÀNH TIỀN
 				</div>
 			</div>
 		</div>
 	</div>
 	<div id="content"></div>
+	<div class="grid">
+		<div id="displaySum">
+			<div class="unit w-1-5" style="opacity:0">
+				EMPTY
+			</div>
+			<div class="unit w-1-5" style="opacity:0">
+				EMPTY
+			</div>
+			<div class="unit w-1-5" style="opacity:0">
+				EMPTY
+			</div>
+			<div class="unit w-1-5 align-center s-1-2 center-on-mobiles">
+				TỔNG
+			</div>
+			<div class="unit w-1-5 align-right s-1-2 center-on-mobiles" id="sum">
+				0
+			</div>
+		</div>
+	</div>
+	<div class="grid">
+		<div class="optionCart">
+			<div class="unit w-1-2 align-left">
+				<button id="updateCart" href="/">Mua thêm sản phẩm khác</button>
+			</div>
+			<div class="unit w-1-2 align-right">
+				<button id="goToPay">Tiến hành thanh toán</button>
+			</div>
+		</div>
+	</div>
+</section>
+<section id="emptyNoti" style="display: none">
+	<div class="grid align-center">
+		<div class="unit w-1-1" id="empty">
+			Giỏ hàng của bạn hiện tại đang trống
+		</div>
+		<a href="/">Tiếp tục xem tại đây</a>
+	</div>	
 </section>
 <script type="text/javascript">
+	function displayEmpty(){
+		document.getElementById("cart").style.display = "none";
+		document.getElementById("emptyNoti").style.display = "block";
+	}
+
 	function setCookie(cname, cvalue, exdays){
 		var d = new Date();
 		d.setTime(d.getTime() + (exdays*24*60*60*1000));
@@ -55,22 +96,38 @@ layout: default
 		return "";
 	}
 
+	function updateSum(){
+		var x = document.getElementsByClassName("productQtt");
+		var y = document.getElementsByClassName("price");
+		var sum = 0;
+		for(i=0; i<x.length; i++){
+			sum += x[i].value * Number(y[i].innerText.replace(",000VND", ""));
+		}
+		document.getElementById("sum").innerHTML = numberWithCommas(sum) + ",000VND";
+	}
+
 	function updateCookie(){
-		var cartObj = JSON.parse(getCookie("cart"));
 		var i, str="";
-		for(i in cartObj){
-			str = cartObj[i].name;
-			if(document.getElementById(str) != null){
-				cartObj[i].quantity = document.getElementById(str).getElementsByClassName("productQtt")[0].value;
-			} else {
-				cartObj.splice(i, 1);
-				i--;
+		var cartStr = getCookie("cart");
+		if(cartStr != ""){
+			var cartObj = JSON.parse(cartStr);
+			for(i in cartObj){
+				str = cartObj[i].name;
+				if(document.getElementById(str) != null){
+					cartObj[i].quantity = document.getElementById(str).getElementsByClassName("productQtt")[0].value;
+				} else {
+					cartObj.splice(i, 1);
+					i--;
+				}
+			}
+			setCookie("cart", JSON.stringify(cartObj), 365);
+			if(cartObj.length == 0){
+				//empty cart
+				displayEmpty()
+				document.cookie = "cart=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
 			}
 		}
-		setCookie("cart", JSON.stringify(cartObj), 365);
-		if(cartObj.length == 0){
-			document.cookie = "cart=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-		}
+		updateSum();
 	}
 
 	function generateHTMLStr(name, path, price, num, link){
@@ -96,26 +153,30 @@ layout: default
 	}
 
 	ajax_get('strObj.html', function(data){
-		var i, j, k, l, str= "", link= "";
+		var i, j, k, l, str= "", link1= "", link2= "", link3= "";
 		var cartStr = getCookie("cart");
 		if(cartStr != ""){
 			var cartObj = JSON.parse(cartStr);
 			for(i in data){
-				link = "{{site.url}}" + "/product/" + data[i].path + "/";
+				link1 = "{{site.url}}" + "/product/" + data[i].path + "/";
 				for(j in data[i].child){
-					link += data[i].child[j].path + "/";
+					link2 = link1 + data[i].child[j].path + "/";
 					for(k in data[i].child[j].product){
 						var x = data[i].child[j].product[k];
-						link += x.path;
+						link3 = link2 + x.path;
 						for(l in cartObj){
 							if(cartObj[l].name == x.path){
-								str = str + generateHTMLStr(x.name, x.path, x.price, cartObj[l].quantity, link);
+								str = str + generateHTMLStr(x.name, x.path, x.price, cartObj[l].quantity, link3);
 							}
 						}
 					}
 				}
 			}
 			document.getElementById("content").innerHTML = str;
+			updateSum();
+		} else {
+			//empty cart
+			displayEmpty()
 		}
 	});
 

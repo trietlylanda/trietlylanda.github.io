@@ -104,6 +104,9 @@
   .hide-on-mobiles {
     display: none !important;
   }
+
+  //divide two for special case
+  .grid:not(.no-stacking-on-mobiles) .s-1-2 { width: 50%!important; }
 }
 
 /* Expand the wrap a bit further on larger screens */

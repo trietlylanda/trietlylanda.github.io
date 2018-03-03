@@ -492,7 +492,7 @@ footer{
 /* End Bread Crumb View */
 
 /* Cart */
-.cart{
+#cart{
 	.title{
 		text-transform: uppercase;
 		font-size: 1.7rem;
@@ -506,7 +506,8 @@ footer{
 	    font-weight: 400;
 	    font-style: normal;
 	    text-transform: uppercase;
-        border-bottom: 1px solid #999;
+    	border-bottom: 1px solid #999;
+    	padding-bottom: 20px;
 	}
 	.cart_row{
 		img{
@@ -563,6 +564,53 @@ footer{
 				margin: 1rem auto;
 			}
 		}
+	}
+	#displaySum{
+	    font-weight: 400;
+	    font-style: normal;
+	    text-transform: uppercase;
+	    padding: 30px 0;
+		border-top: 1px solid #999;
+		@media screen and (max-width: 568px) {
+			padding: 10px 0;
+			font-size: 1.2rem;
+			font-weight: 700;
+		}
+	}
+	.optionCart{
+		button{
+			text-transform: uppercase;
+			font-weight: 400;
+		    padding: 12px 20px;
+	        border-color: transparent;	
+	        cursor: pointer;	
+		}
+		#updateCart{
+			color: #333;
+		    background-color: #e6e6e6;
+		}
+		#goToPay{
+			color: #fff;
+		    background-color: $noti-red;
+		}
+	}
+}
+#emptyNoti{
+	font-size: 2rem;
+	color: #555;
+	line-height: 2.5rem;
+	#empty{
+		padding: 20px 0;
+	}
+	a{
+		line-height: 2.5rem;
+		color: $noti-red;
+		text-decoration: none;
+	}
+	margin-top: 10vh;
+	margin-bottom: 10vh;
+	@media screen and (max-width: 568px) {
+		font-size: 1.5rem;
 	}
 }
 /* End cart */
