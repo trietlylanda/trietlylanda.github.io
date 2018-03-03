@@ -3,36 +3,43 @@ layout: default
 ---
 
 <section class="cart">
-	<div class="section-header">
-		<div class="grid">
-			<div class="unit w-1-1 align-center">
-				<div class="title">
-				</div>
-			</div>
+	<div class="grid">
+		<div class="unit w-1-1 align-center">
+			<div class="title">GIỎ HÀNG CỦA BẠN</div>
 		</div>
 	</div>
 	<div class="grid hide-on-mobiles">
 		<div class="unit w-1-1">
 			<div class="cart-header">
-				<div class='grid'>
-					<div class='unit w-3-5'>
-						SAN PHAM
+				<div class="grid hide-on-mobiles">
+					<div class="unit w-1-5 align-left">
+						SẢN PHẨM
 					</div>
-					<div class='unit w-1-5'>
-						SO LUONG
+					<div class="unit w-1-5 align-left" style="opacity:0">TÊN
 					</div>
-					<div class='unit w-1-5'>
-						TONG CONG
+					<div class="unit w-1-5 align-center">
+						ĐƠN GIÁ
+					</div>
+					<div class="unit w-1-5 align-center">
+						SỐ LƯỢNG
+					</div>
+					<div class="unit w-1-5 align-right">
+						THÀNH TIỀN
 					</div>
 				</div>
 			</div>
-			<div id="content">
-				
-			</div>
 		</div>
 	</div>
+	<div id="content"></div>
 </section>
 <script type="text/javascript">
+	function setCookie(cname, cvalue, exdays){
+		var d = new Date();
+		d.setTime(d.getTime() + (exdays*24*60*60*1000));
+		var expires = "expires" + d.toGMTString();
+		document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+	}
+
 	function getCookie(cname){
 		var name = cname + "=";
 		var ca = document.cookie.split(';');
@@ -48,8 +55,26 @@ layout: default
 		return "";
 	}
 
-	function generateHTMLStr(name, path, price, num){
-		var str = "<div class='cart_row'><div class='grid'><div class='unit w-3-5'>" + "<img src='/img/product/" + path + ".jpg'  width='100'>" + name + "</div><div class='unit w-1-5'>" + num + "</div><div class='unit w-1-5'>" + price*num + ",000VND" + "</div></div></div>" ;
+	function updateCookie(){
+		var cartObj = JSON.parse(getCookie("cart"));
+		var i, str="";
+		for(i in cartObj){
+			str = cartObj[i].name;
+			if(document.getElementById(str) != null){
+				cartObj[i].quantity = document.getElementById(str).getElementsByClassName("productQtt")[0].value;
+			} else {
+				cartObj.splice(i, 1);
+				i--;
+			}
+		}
+		setCookie("cart", JSON.stringify(cartObj), 365);
+		if(cartObj.length == 0){
+			document.cookie = "cart=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+		}
+	}
+
+	function generateHTMLStr(name, path, price, num, link){
+		var str = "<div class='cart_row' id=" + '"' + path + '"' + "><div class='grid'><div class='unit w-1-5 align-left center-on-mobiles'>" + "<a href='" + link + "'><img src='/img/product/" + path + ".jpg'></a></div><div class='unit w-1-5 align-left center-on-mobiles'><div class='name'><a href='" + link + "'>" + name + "</a><button onclick='deleteProduct(" + '"' + path + '"' + ")'>Xóa</button></div></div><div class='unit w-1-5 align-center hide-on-mobiles'><div class='price' value='" + price + "'>" + price + ",000VND</div></div><div class='unit w-1-5 align-center'><input type='number' class='productQtt' value='" + num + "' min='1' step='1' onchange='changeQtt()'></input></div><div class='unit w-1-5 align-right center-on-mobiles'><div class='mulPrice'>" + price*num + ",000VND</div></div></div></div>";
 		return str;
 	}
 
@@ -71,24 +96,50 @@ layout: default
 	}
 
 	ajax_get('strObj.html', function(data){
-		var i, j, k, l, str= "";
+		var i, j, k, l, str= "", link= "";
 		var cartStr = getCookie("cart");
 		if(cartStr != ""){
 			var cartObj = JSON.parse(cartStr);
 			for(i in data){
+				link = "{{site.url}}" + "/product/" + data[i].path + "/";
 				for(j in data[i].child){
+					link += data[i].child[j].path + "/";
 					for(k in data[i].child[j].product){
 						var x = data[i].child[j].product[k];
+						link += x.path;
 						for(l in cartObj){
-							if(cartObj[l].name == x.path)
-							str += generateHTMLStr(x.name, x.path, x.price, cartObj[l].quantity);
+							if(cartObj[l].name == x.path){
+								str = str + generateHTMLStr(x.name, x.path, x.price, cartObj[l].quantity, link);
+							}
 						}
 					}
 				}
 			}
 			document.getElementById("content").innerHTML = str;
-		} else {
-			document.getElementById("content").innerHTML = "Ban chua mua gi ca";
 		}
 	});
+
+	const numberWithCommas = (x) => {
+		return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+	}
+
+	function changeQtt(){
+		var x = document.getElementsByClassName("productQtt");
+		var y = document.getElementsByClassName("price");
+		var cartObj = JSON.parse(getCookie("cart"));
+		var i, j;
+		for(i=0; i<x.length; i++){
+			x[i].value = Math.round(x[i].value);
+			if(x[i].value == 0){
+				x[i].value = 1;
+			}
+			document.getElementsByClassName("mulPrice")[i].innerHTML = numberWithCommas(Number(y[i].innerText.replace(",000VND", "")) * x[i].value) + ",000VND";
+		}
+		updateCookie();
+	}
+
+	function deleteProduct(idByPath){
+		document.getElementById(idByPath).remove();
+		updateCookie();
+	}
 </script>

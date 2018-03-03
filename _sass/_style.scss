@@ -148,10 +148,7 @@ header{
 						background-color: #fff;
 						color: $noti-red;
 					}
-				    -webkit-transition: all 0.2s ease;
-				    -moz-transition: all 0.2s ease;
-				    -o-transition: all 0.2s ease;
-				    transition: all 0.2s ease;
+					@include transition(all 0.2s ease);
 				}
 			}
 			.dropdown:hover{
@@ -235,8 +232,7 @@ header{
 				bottom: 0;
 				left: 0;
 				right: 0;
-				-webkit-transition: padding-bottom 0.5s ease;
-			    transition: padding-bottom 0.5s ease;
+				@include transition(padding-bottom 0.5s ease);
 				p{
 					color: #fff;
 					font-size: 0.8rem;
@@ -247,8 +243,7 @@ header{
 		.img_container:hover{
 			.description{
 				padding-bottom: 1.6rem;
-				-webkit-transition: padding-bottom 0.5sease;
-			    transition: padding-bottom 0.5s ease;
+				@include transition(padding-bottom 0.5s ease);
 			}
 			.overlay{
 				opacity: 1;
@@ -262,6 +257,7 @@ header{
 .main_product{
 	margin-top: 1rem;
 	.title{
+		text-transform: uppercase;
 		font-size: 1.7rem;
 		font-weight: 300;
 		color: #333;
@@ -371,10 +367,7 @@ footer{
 					width: 100%;
 					position: absolute;
 					bottom: -100px;
-				    -webkit-transition: all 0.5s ease;
-				    -moz-transition: all 0.5s ease;
-				    -o-transition: all 0.5s ease;
-				    transition: all 0.5s ease;
+					@include transition(all 0.5s ease);
 				    .up{
 				    	background: url(/img/bg_banner_color.png) no-repeat scroll center;
 				    	height: 2.5rem;
@@ -497,3 +490,79 @@ footer{
 	}
 }
 /* End Bread Crumb View */
+
+/* Cart */
+.cart{
+	.title{
+		text-transform: uppercase;
+		font-size: 1.7rem;
+		font-weight: 300;
+		color: #333;
+		line-height: 2rem;
+		padding: 1rem;
+		border-bottom: 1px solid #999;
+	}
+	.cart-header{
+	    font-weight: 400;
+	    font-style: normal;
+	    text-transform: uppercase;
+        border-bottom: 1px solid #999;
+	}
+	.cart_row{
+		img{
+			width: 10rem;
+			height: auto;
+		}
+		.name{
+			text-transform: uppercase;
+			margin: 2.5rem 0;
+			a{		
+				color: #000;
+				text-decoration: none;
+			}
+			button{
+				cursor: pointer;
+				color: #555;
+				display: block;
+				background-color: transparent;
+				border-color: transparent;
+				margin: 1rem 0 0 0;
+				padding: 0;
+			}
+		}
+		.price{
+			margin: 2.5rem auto;
+		}
+		.productQtt{
+			text-align: center;
+			margin: 2.5rem auto;
+			max-width: 4rem;
+			line-height: 2rem;
+			background-color: #e6e6e6;
+			font-weight: 700;
+		    border-color: transparent;
+			@include transition(opacity 0.4s ease-out);
+		}
+		.mulPrice{
+			margin: 2.5rem auto;
+		}
+		@media screen and (max-width: 568px) {
+			font-size: 1.2rem;
+			img{
+				width: 61.7283%;
+				height: auto;
+			}
+			.name{
+				margin: 0.5rem 0;
+				button{
+					margin: 0 auto;
+					margin-top: 1rem;
+				}
+			}
+			.price, .productQtt, .mulPrice{
+				margin: 1rem auto;
+			}
+		}
+	}
+}
+/* End cart */
