@@ -16,10 +16,10 @@ layout: default
 							{% assign link = section.path %}
 							{% assign link = link | append: "/" %}					
 							{% assign link = link | append: child.path %}
-							{% assign items = items | concat: child.product %}
-								{% for item in items%}	
-									{% include short_cut.html %}
-								{% endfor %}
+							{% assign items = child.product %}
+							{% for item in items%}	
+								{% include short_cut.html %}
+							{% endfor %}
 						{% endif %}
 						{% endfor %}
 					{% endif %}

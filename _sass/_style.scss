@@ -398,6 +398,10 @@ footer{
 					text-transform: uppercase;
 					margin: 0.6rem 0 0.3rem 0;
 					font-weight: 300; 
+					@media screen and (max-width: 568px) {
+						font-weight: 400;
+						font-size: 1.2rem;
+					}
 				}
 				.price{
 					color: #DC3912;
@@ -449,6 +453,7 @@ footer{
 	    font-size: 1rem;
 	    margin: 0.2rem 0.1rem;
 	    cursor: pointer;
+	    margin-bottom: 10px;
 	}
 	.title{
 		color: #333;
@@ -457,6 +462,9 @@ footer{
 	}
 	.content{
 		padding: 0.5rem 0 1rem 0.7rem;
+		p{
+			margin: 0;
+		}
 	}
 }
 /* End Product */
