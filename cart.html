@@ -57,7 +57,9 @@ layout: default
 				</a>
 			</div>
 			<div class="unit w-1-2 align-right">
-				<button id="goToPay">Tiến hành thanh toán</button>
+				<a href="/checkout">
+					<button id="goToPay">Tiến hành thanh toán</button>
+				<a>
 			</div>
 		</div>
 	</div>
@@ -71,6 +73,10 @@ layout: default
 	</div>	
 </section>
 <script type="text/javascript">
+	const numberWithCommas = (x) => {
+		return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+	}
+	
 	function displayEmpty(){
 		document.getElementById("cart").style.display = "none";
 		document.getElementById("emptyNoti").style.display = "block";
@@ -106,6 +112,7 @@ layout: default
 			sum += x[i].value * Number(y[i].innerText.replace(",000VND", ""));
 		}
 		document.getElementById("sum").innerHTML = numberWithCommas(sum) + ",000VND";
+		setCookie("sum", sum, 365);
 	}
 
 	function updateCookie(){
@@ -132,8 +139,8 @@ layout: default
 		updateSum();
 	}
 
-	function generateHTMLStr(name, path, price, num, link){
-		var str = "<div class='cart_row' id=" + '"' + path + '"' + "><div class='grid'><div class='unit w-1-5 align-left center-on-mobiles'>" + "<a href='" + link + "'><img src='/img/product/" + path + ".jpg'></a></div><div class='unit w-1-5 align-left center-on-mobiles'><div class='name'><a href='" + link + "'>" + name + "</a><button onclick='deleteProduct(" + '"' + path + '"' + ")'>Xóa</button></div></div><div class='unit w-1-5 align-center hide-on-mobiles'><div class='price' value='" + price + "'>" + price + ",000VND</div></div><div class='unit w-1-5 align-center'><input type='number' class='productQtt' value='" + num + "' min='1' step='1' onchange='changeQtt()'></input></div><div class='unit w-1-5 align-right center-on-mobiles'><div class='mulPrice'>" + price*num + ",000VND</div></div></div></div>";
+	function generateHTMLCart(name, path, price, num, link){
+		var str = "<div class='cart_row' id=" + '"' + path + '"' + "><div class='grid'><div class='unit w-1-5 align-left center-on-mobiles'>" + "<a href='" + link + "'><img src='/img/product/" + path + ".jpg'></a></div><div class='unit w-1-5 align-left center-on-mobiles'><div class='name'><a href='" + link + "'>" + name + "</a><button onclick='deleteProduct(" + '"' + path + '"' + ")'>Xóa</button></div></div><div class='unit w-1-5 align-center hide-on-mobiles'><div class='price' value='" + price + "'>" + numberWithCommas(price) + ",000VND</div></div><div class='unit w-1-5 align-center'><input type='number' class='productQtt' value='" + num + "' min='1' step='1' onchange='changeQtt()'></input></div><div class='unit w-1-5 align-right center-on-mobiles'><div class='mulPrice'>" + numberWithCommas(price*num) + ",000VND</div></div></div></div>";
 		return str;
 	}
 
@@ -168,7 +175,7 @@ layout: default
 						link3 = link2 + x.path;
 						for(l in cartObj){
 							if(cartObj[l].name == x.path){
-								str = str + generateHTMLStr(x.name, x.path, x.price, cartObj[l].quantity, link3);
+								str = str + generateHTMLCart(x.name, x.path, x.price, cartObj[l].quantity, link3);
 							}
 						}
 					}
@@ -181,10 +188,6 @@ layout: default
 			displayEmpty()
 		}
 	});
-
-	const numberWithCommas = (x) => {
-		return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-	}
 
 	function changeQtt(){
 		var x = document.getElementsByClassName("productQtt");
