@@ -112,7 +112,6 @@ layout: default
 			sum += x[i].value * Number(y[i].innerText.replace(",000VND", ""));
 		}
 		document.getElementById("sum").innerHTML = numberWithCommas(sum) + ",000VND";
-		setCookie("sum", sum, 365);
 	}
 
 	function updateCookie(){

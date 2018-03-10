@@ -1,8 +1,13 @@
 ---
 layout: default
 ---
-
-<section class="checkout">
+<form action="https://formspree.io/skinlosophy.hn@gmail.com"
+      method="POST">
+    <input type="text" name="name">
+    <input type="email" name="_replyto">
+    <input type="submit" value="Send">
+</form>
+<section id="checkout">
 	<div class="grid">
 		<div class="unit w-1-1 align-center">
 			<div class="checkoutTitle">
@@ -15,29 +20,26 @@ layout: default
 			<div class="infoTitle align-left center-on-mobiles">
 				thông tin khách hàng
 			</div>
-			<div>
+			<form id="validateForm">
 				<div class="form-group" >
-					
+					<input type="text" name="name" placeholder="Họ và tên" id="inputName">
 				</div>
 				<div class="form-group" >
-					<input type="text" name="full_name" placeholder="Họ và tên">
+					<input type="tel" name="phone" placeholder="Số điện thoại" max-length="11" id="inputPhone">
 				</div>
 				<div class="form-group" >
-					<input type="tel" name="phone" placeholder="Số điện thoại" max-length="11" required="true">
+					<input type="email" name="email" placeholder="Email" id="inputEmail">
 				</div>
 				<div class="form-group" >
-					<input type="email" name="email" placeholder="Email">
+					<input type="text" name="address" placeholder="Địa chỉ" id="inputAddress">
+				</div>
+				<div class="form-group">
+					<select id="billing_address_province" name="province">{% include province.html %}</select>
 				</div>
 				<div class="form-group" >
-					<input type="text" name="address" placeholder="Địa chỉ">
+					<textarea id="inputBillingNote" placeholder="Ghi chú đơn hàng" name="billing_note" row="3" ></textarea>
 				</div>
-				<div class="form-group" >
-					<select id="billing_address_province" name="billing_address[province_id]" class="formcontrol valid" required="" aria-required="true" aria-invalid="false">{% include province.html %}</select>
-				</div>
-				<div class="form-group" >
-					<textarea id="billing_note" placeholder="Ghi chú đơn hàng" name="billing_note" row="3"></textarea>
-				</div>
-			</div>
+			</form>
 		</div>
 		<div class="unit w-1-3">
 			<div class="infoTitle align-center center-on-mobiles">
@@ -45,12 +47,12 @@ layout: default
 			</div>
 			<div class="shipping">
 				<label class="method">
-					<input class="input-method" type="radio" name="gateway" checked="checked">
+					<input class="input-method" type="radio" name="gateway" checked="checked" value="COD">
 					<span class="label-radio">Thanh toán khi giao hàng (COD)</span>
 				</label>
 				<span class="desc"></span>
 				<label class="method">
-					<input class="input-method" type="radio" name="gateway">
+					<input class="input-method" type="radio" name="gateway" value="BANK">
 					<span class="label-radio">Chuyển khoản qua ngân hàng</span>
 				</label>
 				<span class="desc"></span>
@@ -78,11 +80,18 @@ layout: default
 				</div>
 			</div>
 			<div class="form-group" >
-				<input type="text" name="coupon" placeholder="Mã giảm giá (nếu có)">
+				<input type="text" name="coupon" id="inputCoupon" placeholder="Mã giảm giá (nếu có)">
 			</div>
 			<div class="align-right center-on-mobiles">
-				<button>đặt hàng</button>
+				<button type="submit" id="submit">đặt hàng</button>
 			</div>
+		</div>
+	</div>
+</section>
+<section id="thankyou" style="display: none">
+	<div class="grid">
+		<div class="unit w-1-1 align-center">
+			Cảm ơn bạn đã mua hàng. Skinlosophy sẽ liên hệ với bạn.
 		</div>
 	</div>
 </section>
@@ -152,4 +161,73 @@ layout: default
 			window.location = "{{ site.url }}/cart";
 		}
 	});
+
+	$(document).ready(function() {
+		$("#validateForm").validate({
+			rules: {
+				name: "required",
+				email: {
+					required: true,
+					email: true
+				},
+				phone: {
+					required: true,
+					maxlength: 12
+				},
+				province: "required"
+			},
+			messages: {
+				name: "Xin vui lòng điền họ và tên",
+				email: {
+					required: "Xin vui lòng nhập địa chỉ email",
+					email: "Email không hợp lệ",
+				},
+				phone: {
+					required: "Xin vui lòng nhập số điện thoại",
+					maxlength: "Số điện thoại không hợp lệ",
+				},
+				province: "Xin vui lòng chọn tỉnh thành"
+			},
+		});
+
+	    $('#submit').on('click', function(e) {
+	        e.preventDefault();
+	        
+	        var name = $('#inputName').val();
+	        var email = $('#inputEmail').val();
+	        var phone = $('#inputPhone').val();
+	        var address = $('#inputAddress').val();
+	        var province = $('#billing_address_province').val();
+	        var note = $('#inputBillingNote').val();
+	        var coupon = $('#inputCoupon').val();
+	        var shipping = $( 'input:checked' ).val();
+	        //pretend we don't need validation
+	        
+	        //send to formspree
+	        if($("#validateForm").valid()){
+		        $.ajax({
+		            url:'https://formspree.io/skinlosophy.hn@gmail.com',
+		            method:'POST',
+		            data:{
+		                name:name,
+		                email:email,
+		                phone:phone,
+		                address:address,
+		                province:province,
+		                note: note,
+		                cart: document.cookie,
+		                coupon: coupon,
+		                shipping: shipping
+		            },
+		            dataType:"json",
+		            success:function() {
+		                console.log('success');
+		                document.cookie = "cart=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+		                $('#checkout').hide();
+		                $('#thankyou').show();
+		            }
+		        });	        
+	        }
+	    });
+	}); 
 </script>

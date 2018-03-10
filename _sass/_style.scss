@@ -555,7 +555,7 @@ footer{
 		.mulPrice{
 			margin: 2.5rem auto;
 		}
-		@media screen and (min-width: 568px){
+		@media screen and (max-width: 568px){
 			font-size: 1.2rem;
 			img{
 				width: 61.7283%;
@@ -624,7 +624,7 @@ footer{
 /* End cart */
 
 /* Checkout */
-.checkout{
+#checkout{
 	.checkoutTitle{
 		text-transform: uppercase;
 		font-size: 1.7rem;
@@ -739,6 +739,15 @@ footer{
 			font-weight: 300;
 			color: $noti-red;
 		}
+	}
+}
+#thankyou{
+	font-size: 2rem;
+	line-height: 2.5rem;
+	margin-top: 10vh;
+	margin-bottom: 20vh;
+	@media screen and (max-width: 568px) {
+		font-size: 1.5rem;
 	}
 }
 /* End Checkout */
