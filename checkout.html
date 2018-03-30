@@ -85,6 +85,9 @@ layout: default
 			<div class="align-right center-on-mobiles">
 				<button type="submit" id="submit">đặt hàng</button>
 			</div>
+			<div class="align-right center-on-mobiles " id="notFinnished">
+				<i>* Bạn chưa hoàn thiện thông tin cá nhân</i>
+			</div>
 		</div>
 	</div>
 </section>
@@ -227,6 +230,8 @@ layout: default
 		                $('#thankyou').show();
 		            }
 		        });	        
+	        } else {
+	        	$('#notFinnished').show();
 	        }
 	    });
 	}); 

@@ -740,6 +740,11 @@ footer{
 			color: $noti-red;
 		}
 	}
+	#notFinnished{
+		display: none;
+		font-size: 300;
+		color: $noti-red;
+	}
 }
 #thankyou{
 	font-size: 2rem;
